@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="When are concentric cylinders parallel plates?">
+  <h2>Series expansion and limiting cases </h2>
+  <p>
+The Taylor series is widely used in physics to explore limiting cases of equations. To show you what this statement means, this section analyzes the circumstances under which a cylindrical capacitor can resemble a parallel plate capacitor. </p>
+  <p>
+Figure&#xA0;<a href="toyx.xhtml#fg:concyl">1</a> shows two views of a cylindrical capacitor. It has a length [mathjaxinline]\ell[/mathjaxinline]; the inner radius of the outer cylinder is [mathjaxinline]b[/mathjaxinline]; and the outer radius of the inner cylinder is [mathjaxinline]a[/mathjaxinline]. </p>
+  <div id="fg:concyl" class="figure">
+    <center>
+      <img src="/static/images/W05D4_concentric_cylinder.png" width="440"/>
+      <div class="caption"><b>Figure 1</b>: <span>two different views of a capacitor made
+       of conducting concentric cylinders</span>
+       <p>
+       </p>
+       </div>
+    </center>
+  </div>
+
+ 
+  <p>
+ Equation&#xA0;<a href="toyx.xhtml#eq:cylcap">1</a>(a) is the formula for its capacitance 
+ [mathjaxinline]C_{\rm cyl}[/mathjaxinline]. It looks quite different from the formula for
+  the capacitance [mathjaxinline]C_{\rm plt}[/mathjaxinline] of a parallel plate capacitor. </p>
+  <table id="eq:cylcap" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation">[mathjax]\label{eq:cylcap} C_{\rm cyl} = \frac{2 \pi \varepsilon _0 \ell }{\ln \frac{b}{a}}
+       &#xA0;&#xA0;(a)&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;C_{\rm plt}=\frac{\varepsilon _0 A}{d} &#xA0;(b)[/mathjax]</td>
+    </tr>
+  </table>
+  <p>
+Although the formulas for their capacitances look different, a simple physical argument shows that it is possible for the cylindrical capacitor to resemble a parallel plate capacitor. Imagine that you cut a slit the length of each cylinder and unroll and flatten them without changing their separation. You will then have two plates of length [mathjaxinline]\ell[/mathjaxinline] separated by a distance [mathjaxinline]d=b-a[/mathjaxinline]. The width of the larger plate will be [mathjaxinline]2\pi b[/mathjaxinline] and the width of the smaller plate will be [mathjaxinline]2 \pi a[/mathjaxinline]. The smaller is [mathjaxinline]d[/mathjaxinline], the more nearly equal are the areas of the two unrolled cylinders, and the more closely they resemble a parallel plate capacitor. </p>
+  <p>
+This nice physical argument means that when [mathjaxinline]d[/mathjaxinline] is small enough the two formulas in Eq.&#xA0;<a href="toyx.xhtml#eq:cylcap">1</a> must give nearly the same result. For example, if [mathjaxinline]b = 10[/mathjaxinline]&#xA0;cm, [mathjaxinline]a = 9.8[/mathjaxinline]&#xA0;cm and [mathjaxinline]\ell = 10[/mathjaxinline]&#xA0;cm, Eq.&#xA0;<a href="toyx.xhtml#eq:cylcap">1</a>(a) gives [mathjaxinline]C_{\rm cyl}=275.2[/mathjaxinline]&#xA0;pF, and Eq.&#xA0;<a href="toyx.xhtml#eq:cylcap">1</a>(b) gives [mathjaxinline]C_{\rm plt}=278.0[/mathjaxinline]&#xA0;pF. They agree to within 1%. </p>
+  <p><h2>Taylor series</h2> The physical argument focuses our attention on the spacing between the plates. We will use the Taylor series for [mathjaxinline]\ln (1+x)[/mathjaxinline] to see what happens to Eq.&#xA0;<a href="toyx.xhtml#eq:cylcap">1</a>(a) when [mathjaxinline]d[/mathjaxinline] is small. </p>
+  <p>
+The Taylor series of a function [mathjaxinline]f(x)[/mathjaxinline] around some point [mathjaxinline]x_0[/mathjaxinline] is </p>
+  <table id="eq:Taylorgen" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation">[mathjax]f(x) = f(x_0)+f'(x_0) (x-x_0) + \frac{1}{2}f"(x_0)(x-x_0)^2 + \cdots + \frac{f^ n}{n!}(x-x_0)^ n + \cdots . \label{eq:Taylorgen}[/mathjax]</td>
+    </tr>
+  </table>
+  <p>
+ where the primes on [mathjaxinline]f[/mathjaxinline] indicate the number of times it has been differentiated. You can work out any series expansion from the general form, but it is more efficient just to know the series expansions of particular functions. Table&#xA0;<a href="toyx.xhtml#tb:TaySer">1</a> lists some series expansions that physicists know by heart. The expansions are around [mathjaxinline]x_0=0[/mathjaxinline] </p>
+  <div id="tb:TaySer" class="table">
+    <div class="caption"><b>Table 1</b>: <span>Useful series expansions of some common functions </span></div>
+    <center>
+      <table cellspacing="0" class="tabular" style="table-layout:auto">
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+ function </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ expansion ([mathjaxinline]n =0, 1, 2, \ldots , \infty[/mathjaxinline]) </p>
+          </td>
+          <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ comments </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+[mathjaxinline](1+x)^ m[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ [mathjaxinline]1 + m\, x +\frac{m (m-1)}{2} x^2 + \cdots + \frac{m!}{n!(m-n)!}x^ n + \cdots[/mathjaxinline]</p>
+          </td>
+          <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ this is the binomial expansion; [mathjaxinline]m[/mathjaxinline] can be negative or positive; [mathjaxinline]m[/mathjaxinline] can be a fraction </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+[mathjaxinline]\sin \theta[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ [mathjaxinline]\theta -\frac{ \theta ^3}{3!} + \cdots + (-1)^ n\;  \frac{\theta ^{(2n+1)}}{(2n+1)!} +\cdots[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ this is the small angle approximation; [mathjaxinline]\theta[/mathjaxinline] must be in radians </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+[mathjaxinline]\ln (1+x)[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ [mathjaxinline]x -\frac{x^2}{2} + \frac{x^3}{3} + \cdots + (-1)^ n\; \frac{x^{(n+1)}}{n+1} + \cdots[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ use this expansion to analyze the formula for the capacitance of a cylindrical capacitor </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+            <p>
+[mathjaxinline]\exp (x)[/mathjaxinline] or [mathjaxinline]e^ x[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+ [mathjaxinline]1+x+\frac{x^2}{2} + \cdots + \frac{x^ n}{n!} + \cdots[/mathjaxinline]</p>
+          </td>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">&#xA0;</td>
+        </tr>
+      </table>
+    </center>
+  </div>
+</html>

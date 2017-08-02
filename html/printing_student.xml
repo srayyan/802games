@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<html display_name="">
+<SCRIPT>
+function doAnswers () {
+     // Fire all of the button clicks
+     var mybuttons = document.getElementsByClassName('show');
+     for (i=0; i != mybuttons.length; i++) {
+          mybuttons.item(i).click();
+     }
+}
+
+function doPrint () {
+
+MathJax.Hub.Config({
+  "HTML-CSS": {
+    scale: 80
+  }
+});
+
+MathJax.Callback.Queue(
+  ["Reprocess", MathJax.Hub],
+  [callme]
+);
+
+}
+
+function callme() {
+
+     var divToPrint = document.getElementsByClassName('vert-mod').item(0);
+     var data = divToPrint.outerHTML;
+     var popupWindow = window.open('');
+     var gt = String.fromCharCode(62);
+     popupWindow.document.write('<HTML>\n<HEAD>\n');
+     popupWindow.document.write('<TITLE>8.02 PSet Printing</TITLE>\n');
+     popupWindow.document.write('<STYLE>\n');
+     popupWindow.document.write('h2 { margin-top:10px; margin-bottom:0px; font-size:18pt; page-break-after: avoid; }\n');
+     popupWindow.document.write('img { display: block; max-width:310px; max-height:310px; page-break-inside: avoid; }\n');
+     popupWindow.document.write('center, tr { page-break-inside: avoid; }\n');
+     popupWindow.document.write('body { line-height:1.1; font-size:12pt; font-family: "Times New Roman", Times, serif; }\n');
+     popupWindow.document.write('#myPrinter, .action, .modal, .problem-progress, p:empty, span '+gt+' h2, div '+gt+' h2, li '+gt+' div, .discussion-module, .indicator_container, .sr, .status, input { display:none; }\n');
+     popupWindow.document.write('.donotprint { display:none !important; }\n');
+     popupWindow.document.write('[id^=\'display\'].equation { display:none; }\n');
+     popupWindow.document.write('.capa_inputtype.choicegroup { display:block; }\n');
+     popupWindow.document.write('.capa_inputtype.choicegroup input { display:inline-block; }\n');
+     popupWindow.document.write('section.problem div p.answer { display:inline; margin-left:10px;}\n');
+     popupWindow.document.write('.inline { display:inline; }\n');
+     popupWindow.document.write('.gap { padding-bottom: 0px !important; padding-top: 0px; margin-top:12px !important;}\n');
+     popupWindow.document.write('label { display:block; clear:both; float:left; }\n');
+     popupWindow.document.write('fieldset { border:none; }\n');
+     popupWindow.document.write('li { list-style: none; }\n');
+     popupWindow.document.write('.xmodule_HtmlModule table {border-spacing: 0; table-layout: fixed; border-collapse: collapse; margin: 0 auto; width: auto;}');
+     popupWindow.document.write('.xmodule_HtmlModule tr {line-height: 1.4em;}');
+     popupWindow.document.write('.xmodule_HtmlModule th {background: none repeat scroll 0 0 #EEEEEE; font-weight: bold; border: 1px solid #CCCCCC; margin: 20px 0; padding: 10px; text-align: left;}');
+     popupWindow.document.write('.xmodule_HtmlModule th.first {width:35%;}');
+     popupWindow.document.write('.xmodule_HtmlModule td {margin: 0; padding: 5px 0 5px 10px; text-align: left; vertical-align: top; border: 1px solid #CCCCCC;}');
+     popupWindow.document.write('ol {margin: 0; padding-left: 10px;}');
+     popupWindow.document.write('p {margin-top:12px; margin-bottom:12px; color: black;}');
+     popupWindow.document.write('form {margin: 0;}');
+     popupWindow.document.write('h2, table {padding-top: 10px;}');
+     popupWindow.document.write('section.problem .solution-span '+gt+' span:empty {display: none;}');
+     popupWindow.document.write('section.problem .solution-span '+gt+' span {background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #DDDDDD; border-radius: 3px; box-shadow: 0 0 0 1px #EEEEEE inset; display: block; margin: 20px 0 0 0; padding: 9px 15px 0; position: relative;}');
+     popupWindow.document.write('@media print {');
+     popupWindow.document.write('body {text-align:justify; text-justify:inter-word;}');
+     popupWindow.document.write('}');
+// These next two lines blanked out for the student printing page only.
+//     popupWindow.document.write('li[id^=\'vert-\'] {page-break-after:always;}');
+//     popupWindow.document.write('a {color:black; text-decoration: none;}');
+//
+     popupWindow.document.write('body {text-align:justify; text-justify:inter-word;}');
+     popupWindow.document.write('}');
+     popupWindow.document.write('</STYLE>\n');
+     popupWindow.document.write('</HEAD>\n');
+     popupWindow.document.write('<BODY>\n');
+     popupWindow.document.write(data);
+     popupWindow.document.write('</BODY>\n');
+     popupWindow.document.write('</HTML>\n');
+     popupWindow.document.close();
+     popupWindow.focus();
+     popupWindow.print();
+//     popupWindow.close();
+
+MathJax.Hub.Config({
+  "HTML-CSS": {
+    scale: 100
+  }
+});
+
+MathJax.Callback.Queue(
+  ["Reprocess", MathJax.Hub]
+);
+
+}
+</SCRIPT>
+<div id="myPrinter">
+<button id="myButton" type="button" onclick="doPrint()">Print Page</button>
+</div>
+</html>
+

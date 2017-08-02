@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<html display_name="Week 2 F Pre-class Reading Summary">
+  <text>
+  <p>
+<b>Week 2 W/Th Reading Assignment:</b>
+</p>
+<p>
+From the book  <a href="/course/pdfbook/0/chapter/3/22">3.6-3.7</a>, <a href="/course/pdfbook/0/chapter/3/29">3.10</a>
+</p>
+<h2>
+<center> Week 2 F Pre-class Reading Summary </center>
+
+
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<br/>  
+<h2>
+<center><b><a href="/course/pdfbook/0/chapter/2/15">Charge Density (Linked to textbook section 2.9)</a></b></center>
+</h2>
+<br/>    
+<h3>
+<i class="itshape"><b class="bfseries"><a href="/course/pdfbook/0/chapter/2/16">Surface Charge Density (Linked to textbook section 2.9.2)</a></b></i>
+</h3>
+<p>
+In a similar manner, the charge can be distributed over a surface [mathjaxinline]S[/mathjaxinline] of area [mathjaxinline]A[/mathjaxinline] with a <i class="itshape">surface charge density</i> [mathjaxinline]\sigma[/mathjaxinline] (lowercase Greek letter <i class="itshape">sigma</i>): 
+</p>
+<p>[mathjax]\sigma (\vec{\mathbf{r}} )=\frac{dq}{dA}[/mathjax]</p>
+<p>
+The dimension of [mathjaxinline]\sigma[/mathjaxinline] is charge/unit area [mathjaxinline](C/m^{\text {2} } )[/mathjaxinline] in SI units. The total charge on the entire surface is: </p>
+<p>[mathjax]Q=\iint \nolimits _{S}^{}\sigma (\vec{\mathbf{r}} )\,  dA[/mathjax]</p>
+
+<h3><i class="itshape"><b class="bfseries">P.S.</b></i></h3>
+<p>
+<i class="itshape"><b class="bfseries"><a href="/course/pdfbook/0/chapter/2/16">Volume Charge Density ( Linked to textbook section 2.9.1) </a></b></i></p>
+<p>
+<i class="itshape"><b class="bfseries"><a href="/course/pdfbook/0/chapter/2/17">Line Charge Density (Linked to textbook section 2.9.3)</a></b></i>
+</p>
+
+<br/>  
+<h2>
+<center><b><a href="/course/pdfbook/0/chapter/3/2">Electric Flux (Linked to textbook section 3.1)</a></b></center>
+</h2>
+<br/>   
+<p>
+The number of electric field lines that penetrates a given surface is called an &#x201C;electric flux," which we denote as [mathjaxinline]\Phi _{E}[/mathjaxinline] . The electric field can therefore be thought of as the number of lines per unit area. </p>
+<p>
+<center><img src="/static/html/W2D3_preClass-fig003.jpg" width="330"/></center>
+</p>
+<p>
+<center><b class="bfseries">Figure 3.1.1</b> Electric field lines passing through a surface of area <i class="itshape">A</i>. </center></p>
+
+<p>
+Consider the surface shown in Figure 3.1.1. Let [mathjaxinline]\vec{\mathbf{A}} =A\,[/mathjaxinline] be defined as the <i class="itshape">area vector</i> having a magnitude of the area of the surface, [mathjaxinline]A[/mathjaxinline] , and pointing in the normal direction, The flux through the surface is </p>
+<p>[mathjax]\Phi _{E} =\vec{E} \cdot \vec{A}  (3.1)[/mathjax]</p>
+<p>
+In general, a surface <i class="itshape">S</i> can be curved and the electric field [mathjaxinline]\mathbf{E}[/mathjaxinline] may vary over the surface. We shall be interested in the case where the surface is <i class="itshape">closed</i>. A closed surface is a surface that completely encloses a volume. In order to compute the electric flux, we divide the surface into a large number of infinitesimal area elements [mathjaxinline]\Delta _{i} =\Delta A_{i} \,  _{i}[/mathjaxinline] , as shown in Figure 3.1.3. Note that for a closed surface the unit vector [mathjaxinline]_{i}[/mathjaxinline] is chosen to point in the <i class="itshape">outward</i> normal direction. </p>
+<p>
+<center><img src="/static/html/W2D3_preClass-fig005.jpg" width="330"/></center>
+</p>
+<p>
+Again, the electric flux through [mathjaxinline]\Delta _{i}[/mathjaxinline] is </p>
+<p>[mathjax]\Delta \Phi _{E} =\text {E} \cdot \text {A} =\text {E} _{i} \cdot \Delta \text {A} _{i} =E_{i} \Delta A_{i} \cos \theta[/mathjax]</p>
+
+
+<br/>  
+<h2>
+<center><b><a href="/course/pdfbook/0/chapter/3/4">Gauss's Law (Linked to textbook 3.2)</a></b></center>
+</h2>
+<br/>
+<p>
+<i class="itshape">Gauss's Law simulation is available in <a href="/course/pdfbook/0/chapter/3/29">Section 3.10.</a> There you can interact directly with the relevant geometry in a 3D interactive simulation of Gauss's Law.</i>
+</p>
+<p>
+Consider a positive point charge <i class="itshape">Q</i> located at the center of a sphere of radius <i class="itshape">r</i>, as shown in Figure 3.2.1. The electric field due to the charge <i class="itshape">Q</i> is [mathjaxinline]\mathbf{E}=(Q/4\pi \epsilon _{0} r^{2} )[/mathjaxinline] , which points in the radial direction. We enclose the charge by an imaginary sphere of radius <i class="itshape">r</i> called the &#x201C;Gaussian surface." </p>
+<p>
+<center><img src="/static/html/W2D3_preClass-fig007.jpg" width="330"/></center>
+</p>    
+<p>
+<center><b class="bfseries">Figure 3.2.1</b> A spherical Gaussian surface enclosing a charge [mathjaxinline]Q[/mathjaxinline] . </center>
+</p>
+<p>
+<center><img src="/static/html/W2D3_preClass-fig008.jpg" width="330"/></center>
+</p>
+<p>
+<center><b class="bfseries">Figure 3.2.2</b> A small area element on the surface of a sphere of radius <i class="itshape">r</i>. </center></p>
+<p>Thus, the net electric flux through the area element is </p>
+<p>[mathjax]d\Phi _{E} =\text {E} \cdot d\text {A}[/mathjax]</p>
+<p>The total flux through the entire surface is </p>
+<p>[mathjax]\Phi _{E} =\unicode{x222F}_s   \vec{E} d\vec{A}=\frac{Q}{4\pi \epsilon _{0} } \int \nolimits _{0}^{\pi }\sin \theta \,  d\theta \int \nolimits _{0}^{2\pi }\text { } d\phi \text { =} \frac{Q}{\epsilon _{0} } .[/mathjax]</p>
+<p>
+In the above, we have chosen a sphere to be the Gaussian surface. However, it turns out that the shape of the closed surface can be arbitrarily chosen. For the surfaces shown in Figure 3.2.3, the same result ([mathjaxinline]\Phi _{E} =Q/\epsilon _{0}[/mathjaxinline] ) is obtained, whether the choice is [mathjaxinline]S_{1}[/mathjaxinline] , [mathjaxinline]S_{2}[/mathjaxinline] or [mathjaxinline]S_{3}[/mathjaxinline] . </p>
+<p>    
+<center><img src="/static/html/W2D3_preClass-fig011.jpg" width="330"/></center>
+</p>
+<p>
+<center><b class="bfseries">Figure 3.2.3</b> Different Gaussian surfaces with the same outward electric flux. </center></p>
+<br/>
+<p>
+The statement that the net flux through any closed surface is proportional to the net charge enclosed is known as Gauss's law. Mathematically, Gauss's law is expressed as </p>
+<p>[mathjax]\Phi _{E} =\unicode{x222F}_s   \vec{E} d\vec{A}=\frac{q_{\text {enc} } }{\epsilon _{0} } \text {(Gauss's Law),}[/mathjax]</p>
+<p>
+where [mathjaxinline]q_{\text {enc} }[/mathjaxinline] is the net charge inside the surface. </p>
+
+<br/>
+<h2><b>The following steps may be useful when applying Gauss's law: </b></h2>
+<br/>
+    <p>
+(1) Identify the symmetry associated with the charge distribution. </p>
+    <p>
+(2) Determine the direction of the electric field, and a &#x201C;Gaussian surface" on which the magnitude of the electric field is constant over portions of the surface. </p>
+    <p>
+(3) Divide the space into different regions associated with the charge distribution. For each region, calculate [mathjaxinline]q_{\text {enc} }[/mathjaxinline] , the charge enclosed by the Gaussian surface. </p>
+    <p>
+(4) Calculate the electric flux [mathjaxinline]\Phi _{E}[/mathjaxinline] through the Gaussian surface for each region. </p>
+    <p>
+(5) Equate [mathjaxinline]\Phi _{E}[/mathjaxinline] with [mathjaxinline]q_{\text {enc} } /\epsilon _{0}[/mathjaxinline] , and deduce the magnitude of the electric field. </p>
+  </text>
+</html>

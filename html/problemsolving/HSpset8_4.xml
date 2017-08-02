@@ -1,0 +1,11 @@
+
+<html display_name="Another Driven RLC Circuit">
+
+    <p>
+A driven RLC circuit has a total impedance [mathjaxinline]Z[/mathjaxinline] of [mathjaxinline]150[/mathjaxinline] Ohms. The root mean square voltage of the generator is [mathjaxinline]160[/mathjaxinline] Volts, and the resistance in the circuit is [mathjaxinline]110[/mathjaxinline] Ohms. What is the mean power delivered to the circuit in Watts? </p>
+<p>
+Note that at about 2:50 (speed 1.0), Prof. Lewin omits to square the term [mathjaxinline](\omega L - 1/(\omega C))[/mathjaxinline] inside the square root. </p>
+<p>
+The equation 32-30 mentioned by Prof. Lewin refers to the textbook in use at that time. See the readings for Lecture 25.</p>
+ 
+</html>

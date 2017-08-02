@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Week 5 M/T Pre-class Reading Summary">
+
+
+<!--Heading-->
+
+<p><b>Week 5 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/3/16">3.3</a>, <a href="/course/pdfbook/0/chapter/4/13">4.5</a>, <a href="/course/pdfbook/0/chapter/5/3">5.1-5.4</a></p>
+
+<h2>
+<center> Week 5 M/T Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here-->
+
+<h2>
+  <p><center><b><a href="/course/pdfbook/0/chapter/5/3">Capacitance of two oppositely charged conductors</a></b></center></p>
+  <p><center><b><a href="/course/pdfbook/0/chapter/5/3">(Linked to textbook Chapter 5.1)</a></b></center></p> 
+
+</h2>
+
+<br/>
+ <p>
+Suppose you have two flat conducting plates parallel and close to each other, as in Fig. 5.1.2 in DBL. The transfer of charge [mathjaxinline]Q[/mathjaxinline] from one plate to the other makes one plate negatively charged and the other positively charged. This separation of charges creates an electric field between the plates and a potential difference [mathjaxinline]\Delta V[/mathjaxinline] between them. </p>
+<p>
+Because of superposition and the general properties of electrostatic fields, it turns out that for any pair of conductors - not necessarily flat, parallel plates - the amount of transferredcharge [mathjaxinline]Q[/mathjaxinline] is directly proportional to the resulting potential difference [mathjaxinline]\Delta V[/mathjaxinline], i.e., 
+</p>
+  
+<p>[mathjax]Q \propto \Delta V .[/mathjax]</p>
+  
+<p>
+ It is customary to write [mathjaxinline]\Delta V[/mathjaxinline] simply as [mathjaxinline]V[/mathjaxinline]; it's our job to understand that [mathjaxinline]V[/mathjaxinline] is the potential difference between the two conductors. </p>
+  
+<p>The equation is then </p>
+<p>[mathjax]Q = C\, V[/mathjax]</p>
+  
+<p>
+ where [mathjaxinline]C[/mathjaxinline] is the constant of proportionality . We call this constant the &#x201C;capacitance" of the arrangement. [mathjaxinline]C[/mathjaxinline] depends only on the geometry of the configuration of the conductors. The units of capacitance are C/V (coulomb/volt) or C[mathjaxinline]^2[/mathjaxinline]kg[mathjaxinline]^{-2}[/mathjaxinline]m[mathjaxinline]^{-2}[/mathjaxinline]s[mathjaxinline]^2[/mathjaxinline]. The coulomb/volt is called the farad and is abbreviated F. So a system of conductors for which the separation of 1 C of charge corresponds to a potential difference of 1&#xA0;V has a capacitance of 1 F. </p>
+  <p>
+DBL shows you how to use Gauss's law to find [mathjaxinline]C[/mathjaxinline] in terms of the geometrical parameters of parallel plates, concentric spheres, and concentric cylinders. But whether or not you can derive a nice algebraic expression for [mathjaxinline]C[/mathjaxinline], it remains true that [mathjaxinline]C[/mathjaxinline] depends only on the geometry - the shape and relative positions - of the two conductors. In practice you can find the numerical value of [mathjaxinline]C[/mathjaxinline] for any given arrangement of conductors by direct measurement; then from that number you can know how much charge is on each conductor for a given potential difference between them. </p>
+  <p>
+For <a href="/course/pdfbook/0/chapter/5/4">parallel plates(Linked to textbook Chapter 5.1 Example 5.1)</a> the relevant geometry is the area [mathjaxinline]A[/mathjaxinline] of a plate and the distance [mathjaxinline]d[/mathjaxinline] between the plates. In terms of this geometry </p>
+  <p>[mathjax]C = \frac{\epsilon _0 A}{d}.[/mathjax]</p>
+  <p>
+[mathjaxinline]C[/mathjaxinline] is called &#x201C;capacitance" because it describes a system's ability to hold something, much as a bottle of a certain size and shape has a capacity to hold a certain amount of water. [mathjaxinline]C[/mathjaxinline] is telling you how much charge you can separate for a given potential difference; capacitance is a measure of how much electric field is in the volume of space around the conductors when they have a potential difference [mathjaxinline]V[/mathjaxinline]; and capacitance indicates how much energy can be stored in the system for a given potential difference between the conductors. Each of these three different points of view is useful, and they are equivalent. </p>
+</html>

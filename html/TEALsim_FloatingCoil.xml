@@ -1,0 +1,47 @@
+<html>
+<span>
+
+<h1>TEALSim Exploration: Floating Coil</h1>
+
+ <p>
+This applet illustrates the forces on a current carrying coil sitting on the axis of a permanent magnet.  The magnet has its north pole at the top, and the direction of positive current in the coil is counterclockwise when viewed from above. The coil initially rests at one coil radius above the magnet on a platform. There is a marker at two coil radii above the magnet. For current flowing in one direction in the coil the force on the coil will be upward, and if the current is strong enough the coil will levitate, floating on the magnetic fields of the coil plus the magnet.  For the other direction of current the coil is attracted to the magnet. 
+</p>
+
+<p>(Please be patient - the simulation may take ~20 seconds to load)</p>
+<iframe id="teal-iframe" src="/static/html/gwt-teal/FloatingCoil2.html?size=460&amp;graphw=300&amp;graphh=225" width="818" height="530" scrolling="no" frameborder="1" />
+
+<script type="text/javascript">
+function toggleDisplay( id, hidetext, showtext )
+{
+  link = document.getElementById( id + "l" ).childNodes[0];
+
+  with( document.getElementById( id ).style )
+    {
+      if( display == "none" )
+	{
+	  display = "inline";
+	  link.nodeValue = hidetext;
+	}
+      else
+	{
+	  display = "none";
+	  link.nodeValue = showtext;
+	}
+    }
+}
+</script>
+
+ <p>More about this simulation: <a href="javascript:toggleDisplay('ht3','hide','show')" id="ht3l">show</a></p>
+		<div id="ht3" style="display:none">
+
+
+
+
+
+
+
+
+</div>
+
+</span>
+</html>

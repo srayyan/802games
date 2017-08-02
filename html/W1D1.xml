@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<html display_name="Week 1 F Pre-class Reading Summary">
+
+<p>
+<b>Week 1 F Reading Assignment:</b>
+</p>
+<p>
+From the book <a href="/course/pdfbook/0/chapter/1/2">1.1-1.7</a>, <a href="/course/pdfbook/0/chapter/2/3">2.1-2.7</a>
+</p>
+
+
+<h2><center>Week 1 F Pre-class Reading Summary</center></h2>
+
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+
+<h2 align="center"><center><b><a href="/course/pdfbook/0/chapter/1/2">Scalar Fields and Vector Fields</a></b></center></h2>
+<br/>
+
+<p>
+A <i class="itshape">scalar field</i> is a function that gives us a single value of some variable for every point in space.
+</p>
+<p>For example, temperature is a scalar field (see other examples in <a href="/course/pdfbook/0/chapter/1/4">Section 1.2 of the texbook</a>). There are three commonly used representations for a two-dimensional scalar field: Contour Maps, Color-Coding and Relief Maps <a href="/course/pdfbook/0/chapter/1/7">(see Section 1.2.1)</a>.
+A vector is a quantity that has both a magnitude and a direction in space. Vectors are used to describe physical quantities such as velocity, momentum, acceleration and force, associated with an object. However, when we try to describe a system that consists of a large number of objects (e.g., moving water, snow, rain, ...) we need to assign a vector to each individual point in space.  Fluid flow is probably the most intuitive example of a vector field (see examples in <a href="/course/pdfbook/0/chapter/1/9">Section 1.4 of the texbook</a>)</p>
+
+
+
+<h2><center><b><a href="/course/pdfbook/0/chapter/1/16">Electric Fields</a></b></center></h2>
+
+<p><b class="bfseries"><a href="/course/pdfbook/0/chapter/1/14">The Gravitational Field </a></b>(linked to Section 1.5)</p>
+
+
+<p>
+The gravitational field of the Earth is another example of a vector field that can be used to describe the interaction between an object with mass and the Earth. According to Newton's universal law of gravitation, the gravitational force on an object of mass [mathjaxinline]m[/mathjaxinline] due to the interaction with another object of mass [mathjaxinline]M[/mathjaxinline] is given by
+</p>
+<p>[mathjax]\vec{\mathbf{F}} _{g} =-G\frac{Mm}{r^{2} } \hat{\mathbf{r}}[/mathjax]</p>
+
+
+<p><b class="bfseries"><a href="/course/pdfbook/0/chapter/1/16">Electric Fields </a></b>(linked to Section 1.6)</p>
+
+<p>The Electric Field is very analogous to the Gravitational Field.</p> 
+<p>
+The force between electrically charged objects at rest is called the electrostatic force. However, unlike mass in gravitational force, there are two types of electric charge: positive and negative. The electrostatic force between charged objects falls off as the inverse square of their distance of separation, and can be either attractive or repulsive. Charged objects exert forces on each other in a manner that is analogous to gravitation. Consider an object that has charge [mathjaxinline]Q[/mathjaxinline] . A &#x201C;test charge" with charge [mathjaxinline]q[/mathjaxinline] that is placed at a point [mathjaxinline]P[/mathjaxinline] a distance [mathjaxinline]r[/mathjaxinline] from [mathjaxinline]Q[/mathjaxinline] will experience a Coulomb force: </p>
+<p>[mathjax]\vec{\mathbf{F}} _{e} =k_{e} \frac{Qq}{r^{2} } \hat{\mathbf{r}}[/mathjax]</p>   
+<p>
+where [mathjaxinline]\hat{\mathbf{r}}[/mathjaxinline] is the unit vector that points from [mathjaxinline]Q[/mathjaxinline] to [mathjaxinline]q[/mathjaxinline] . The constant of proportionality [mathjaxinline]k_{e} =9.0\times 10^{9} \text {N} \cdot \text {m} ^{2} \text {/C} ^{2}[/mathjaxinline] is called the Coulomb constant. The electric field at [mathjaxinline]P[/mathjaxinline] is defined as
+</p>
+<p>[mathjax]\vec{\mathbf{E}} =\lim _{q\rightarrow 0}^{} \,  \,  \frac{\vec{\mathbf{F}} _{e} }{q} =k_{e} \frac{Q}{r^{2} } \hat{\mathbf{r}}[/mathjax]</p>
+<p>
+The SI unit of electric field is Newtons/Coulomb (N/C), which we will learn later is the same as Volts/meter (V/m). If [mathjaxinline]Q[/mathjaxinline] is positive, its electric field points radially away from the charge; on the other hand, the field points radially inward if [mathjaxinline]Q[/mathjaxinline] is negative (see Figure 1.6.1 from the text, reproduced below). In terms of the field concept, we may say that the charge [mathjaxinline]Q[/mathjaxinline] creates an electric field [mathjaxinline]\vec{\mathbf{E}}[/mathjaxinline] that exerts a force [mathjaxinline]\vec{\mathbf{F}} _{e} = q \vec{\mathbf{E}}[/mathjaxinline] on [mathjaxinline]q[/mathjaxinline].
+</p>
+<table id="img1.6.1" class="img" width="100%" cellspacing = "0" cellpadding="7" style="border: 4px solid transparent">
+<tr>
+<td class="img"><center><img src="/static/html/Field-fig005.jpg" width="240"/></center></td>
+<td class="img"><center><img src="/static/html/Field-fig006.jpg" width="240"/></center></td>
+</tr>
+<tr>
+<td class="img"><center>(a)</center></td>
+<td class="img"><center>(b)</center></td>
+</tr>
+</table>
+
+<center><b class="bfseries">Figure 1.6.1 </b>Electric field for (a) positive and (b) negative charges. </center>
+<br/>
+<br/>
+<p>
+The charges in Figure 1.6.1 are stationary. We can also talk about the electric fields of moving charges. For example, Figure 1.6.2 shows one frame of movies of the electric field of a moving positive and negative point charge, assuming the speed of the charge is small compared to the speed of light. Moving electric charges also have magnetic fields associated with them (stationay electric charges do not), as we will see.  </p>
+    
+<table id="img1.6.2" class="img" width="100%" cellspacing = "0" cellpadding="7" style="table-layout:auto">
+<tr>
+<td class="img"><iframe width="420" height="315" src="//www.youtube.com/embed/gWa0s3V9DeM" frameborder="0" allowfullscreen="allowfullscreen"></iframe></td>
+<td class="img"><iframe width="420" height="315" src="//www.youtube.com/embed/dEOyvbS7t3s" frameborder="0" allowfullscreen="allowscreen"></iframe></td>
+</tr>
+<tr>
+<td class="img"><center>(a)</center></td>
+<td class="img"><center>(b)</center></td>
+</tr>
+</table>
+<center><b class="bfseries">Figure 1.6.2 </b>The electric fields of (a) a moving positive charge, (b) a moving negative charge when the speed of the charge is small compared to the speed of light. </center>
+
+<br/>
+<br/>
+<h2><center><b><a href="/course/pdfbook/0/chapter/2/3">Electric Charge</a></b></center></h2>
+<br/>
+
+<p>
+There are two types of observed electric charge, which we designate as positive and negative. The convention was derived from Benjamin Franklin’s experiments. He rubbed a glass rod with silk and called the charges on the glass rod positive. He rubbed sealing wax with fur and called the charge on the sealing wax negative. Like charges repel and opposite charges attract each other. The unit of charge is called the Coulomb (C).
+</p>
+<p>
+The smallest unit of “free” charge known in nature is the charge of an electron or proton, which has a magnitude of
+</p>
+<p>[mathjax]e = 1.602 \times 10^{-19} C[/mathjax]</p>
+<p>
+Charge of any ordinary matter is quantized in integral multiples of[mathjaxinline]e[/mathjaxinline] . An electron carries one unit of negative charge,[mathjaxinline]-e[/mathjaxinline] , while a proton carries one unit of positive charge, [mathjaxinline]+e[/mathjaxinline] . In a closed system, the total amount of charge is conserved since charge can neither be created nor destroyed. A charge can, however, be transferred from one body to another.
+</p>
+
+<p><b>P.S.</b></p>
+<p><a href="/course/pdfbook/0/chapter/1/9">1. Fluid Field Flow see page 1-9</a></p>
+<p><a href="/course/pdfbook/0/chapter/1/20">2. Vector Field Representations see page 1-20</a></p>
+
+<br/>
+<br/>
+<br/>
+
+</html>
+
+
+
+<!--P.S. The following are what were deleted when editting. There are there just in case -->
+<!--Number 1: Belonged to what is line 20-->
+<!--
+    <table id="a0000000002" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+      <tr>
+        <td class="equation">[mathjax]\vec{\mathbf{F}} _{g} =-G\frac{Mm}{r^{2} } \hat{\mathbf{r}}[/mathjax]</td>
+      </tr>
+    </table>
+-->
+
+<!-- Number 2: belonged to line 30-->
+<!--  <table id="a0000000003" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+      <tr>
+        <td class="equation">[mathjax]\vec{\mathbf{F}} _{e} =k_{e} \frac{Qq}{r^{2} } \hat{\mathbf{r}}[/mathjax]</td>
+      </tr>
+    </table>
+-->
+
+<!-- Number 3: belonged to line 34-->
+<!--
+    <table id="a0000000004" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+      <tr>
+        <td class="equation">[mathjax]\vec{\mathbf{E}} =\lim _{q\rightarrow 0}^{} \,  \,  \frac{\vec{\mathbf{F}} _{e} }{q} =k_{e} \frac{Q}{r^{2} } \hat{\mathbf{r}}[/mathjax]</td>
+      </tr>
+    </table>
+-->
+
+
+
+
+
+
+
+

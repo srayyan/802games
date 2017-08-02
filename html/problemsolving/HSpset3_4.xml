@@ -1,0 +1,7 @@
+
+<html display_name="A Cylindrical Capacitor with and without Dielectric">
+
+    <p>
+A cable consists of an inner conducting wire of radius [mathjaxinline]a[/mathjaxinline] and length [mathjaxinline]l[/mathjaxinline] which carries a charge [mathjaxinline]+q[/mathjaxinline]. It is surrounded by a thin outer metal cylindrical shell of inner radius [mathjaxinline]b[/mathjaxinline], carrying a charge of [mathjaxinline]-q[/mathjaxinline]. Calculate the capacitance of this cylinder in the case where there is a vacuum between the inner wire and the outer cylinder. We now fill the space between the inner wire and the shell with dielectric oil with dielectric constant [mathjaxinline]\kappa = 2.2[/mathjaxinline]. What is the capacitance now? When we bring the oil into the capacitor, will it be pulled in or pushed out? </p>
+
+</html>

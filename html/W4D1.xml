@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<html display_name="Week 4 M/T Pre-class Reading Summary">
+
+
+<!--Heading-->
+
+<p><b>Week 4 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/3/16">3.3-3.4</a>, <a href="/course/pdfbook/0/chapter/4/12">4.4-4.6</a>, <a href="/course/pdfbook/0/chapter/4/34">4.10.5</a></p>
+
+<h2>
+<center> Week 4 M/T Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here-->
+
+<h2>
+  <center><b><a href="/course/pdfbook/0/chapter/3/16">Conductors(Linked to textbook Chapter 3.3)</a></b></center>
+</h2>
+
+<p>
+Conductors have the following basic properties (refer to 3.3 in textbook 3-16): </p>
+<p>
+(1) The electric field is zero inside a conductor. <a href="/course/pdfbook/0/chapter/3/16">(3-16)</a></p>
+<p>
+(2) Any net charge must reside on the surface. </p>
+<p>
+(3) The tangential component of [mathjaxinline]\vec{E}[/mathjaxinline] is zero on the surface of a conductor. <a href="/course/pdfbook/0/chapter/3/17">(3-17)</a> </p>
+<p>
+(4) [mathjaxinline]\vec{E}[/mathjaxinline] is normal to the surface just outside the conductor. <a href="/course/pdfbook/0/chapter/3/18">(3-18)</a></p>
+<p>
+(5) The discontinuity in the normal component of the electric field across the conductor is proportional to the surface charge density.<a href="/course/pdfbook/0/chapter/3/19">(3-19)</a>
+</p>
+
+<p><b>Force on a Conductor</b><a href="/course/pdfbook/0/chapter/3/20">(refer to 3.4 in textbook 3-20)</a></p>
+<p><b>Electrostatic tention</b> on a conducting surface is</p>
+<p>[mathjax]P = \frac{F}{A} = \frac{\sigma^2}{2\varepsilon_0} = \frac{1}{2} \varepsilon(\frac{\sigma}{\varepsilon_0})^2 = \frac{1}{2} \varepsilon_0E^2[/mathjax]</p>
+
+
+<br/>
+<h2>
+  <center><b><a href="/course/pdfbook/0/chapter/4/12">Deriving Electric Field from the Electric Potential (refer to 4.4 in textbook 4-12)</a></b></center>
+</h2>
+
+<p>
+We know that the electric potential at a point <i class="itshape">P</i> is </p>
+<p>[mathjax]V_{P} =-\int \nolimits _{\infty }^{P} \vec{E}\cdot d\vec{s}, \:\:\:\:V(\infty )=0 [/mathjax]</p>
+
+<p>
+If we consider two points that are separated by a small distance [mathjaxinline]d\vec{\vec{s}}[/mathjaxinline] , the following differential form is obtained: </p>
+<p>[mathjax]dV=-\vec{E}\cdot d\vec{s}[/mathjax]</p>
+
+<p>Therefore </p>
+<p>[mathjax]E_{x} =-\frac{\partial V}{\partial x} ,\,  \,  \,  \,  E_{y} =-\frac{\partial V}{\partial y} ,\,  \,  \,  \,  \,  E_{z} =-\frac{\partial V}{\partial z}[/mathjax]</p>
+
+<p>
+By introducing a differential quantity called the <i class="itshape">del (gradient) operator</i> [mathjaxinline]\nabla \equiv \frac{\partial }{\partial x}\hat{i} +\frac{\partial }{\partial y} \hat{j}\frac{\partial }{\partial z}\hat{k}[/mathjaxinline] the electric field can be written as </p>
+
+<p>[mathjax]\vec{E}=E_{x}\hat{i} +E_{y}\hat{j} +E_{z}\hat{k} =-\left( \frac{\partial V}{\partial x} \frac{\partial V}{\partial y} \,  \,  +\frac{\partial V}{\partial z} \right) =-\nabla V.[/mathjax]
+</p>
+
+<h2>
+  <center><b><a href="/course/pdfbook/0/chapter/4/13">Gradients and Equipotentials (refer to 4.5 in textbook 4-13)</a></b></center>
+</h2>
+
+
+<p>
+Suppose a system in two dimensions has an electric potential [mathjaxinline]V(x,y)[/mathjaxinline] . The curves characterized by constant [mathjaxinline]V(x,y)[/mathjaxinline] are called <i class="itshape">equipotential curves</i>. Examples of equipotential curves are depicted in Figure 4.5.1 below. </p>
+<p><center><img src="/static/html/W4-fig007.jpg" width="330"/></center></p>
+<p><center>Figure 4.5.1 Equipotential curves </center></p>
+
+
+<p>
+In three dimensions, surfaces such that [mathjaxinline]V(x,y,z)=\text {constant}[/mathjaxinline] are called <i class="itshape">equipotential surfaces</i>. Because [mathjaxinline]\vec{E}=-\nabla V,[/mathjaxinline] we can show that the direction of [mathjaxinline]\vec{E}[/mathjaxinline] at a point is always perpendicular to the equipotential through that point. We shall show this in two dimensions. Generalization to three dimensions is straightforward. </p>
+<p>
+Referring to Figure 4.5.2, let the potential at a point [mathjaxinline]P(x,y)[/mathjaxinline] be [mathjaxinline]V(x,y)[/mathjaxinline] . The potential difference [mathjaxinline]dV[/mathjaxinline] between [mathjaxinline]P(x,y)[/mathjaxinline] and a neighboring point is [mathjaxinline]dV=(\nabla V)\cdot d\text {s} =-\vec{E}\cdot d\text {s}[/mathjaxinline] <a href="/course/pdfbook/0/chapter/4/14">(refer to 4.5.2 in textbook 4-14)</a> </p>
+<p><center><img src="/static/html/W4-fig008.jpg" width="330"/></center></p>
+<p><center><img src="/static/html/W4-fig009.jpg" width="330"/></center></p>
+<p><center>Figure 4.5.2 Change in <i class="itshape">V</i> when moving from one equipotential curve to another </center></p>
+
+<p>
+If the displacement [mathjaxinline]d\vec{s}[/mathjaxinline] is along the tangent to the equipotential curve that passes through the point [mathjaxinline]P[/mathjaxinline] with coordinates [mathjaxinline](x,y)[/mathjaxinline] , then [mathjaxinline]dV=0[/mathjaxinline] because <i class="itshape">V</i> is constant everywhere on that curve. This implies that [mathjaxinline]\vec{E}\bot d\vec{s}[/mathjaxinline] along the equipotential curve. That is, [mathjaxinline]\vec{E}[/mathjaxinline] is perpendicular to the equipotential. </p>
+    <p>
+Note that the surface of a conductor in electrostatic equilibrium is an <i class="itshape">equipotential surface</i>. <a href="/course/pdfbook/0/chapter/4/16">(Refer to 4.5.1 in textbook 4-16)</a> </p>
+
+<br/>
+    <p>
+The properties of equipotential surfaces can be summarized as follows: </p>
+    <p>
+(i) The electric field lines are perpendicular to the equipotentials and point from higher to lower potentials. </p>
+    <p>
+(ii) By symmetry, the equipotential surfaces produced by a point charge form a family of concentric spheres, and for constant electric field, a family of planes perpendicular to the field lines. </p>
+    <p>
+(iii) The tangential component of the electric field along the equipotential surface is zero, otherwise non-vanishing work would be done to move a charge from one point on the surface to the other. </p>
+    <p>
+(iv) No work is required to move a particle along an equipotential surface. </p>
+ 
+
+
+<h2>
+  <center><b><a href="/course/pdfbook/0/chapter/4/17">Continuous Symmetric Charge Distributions (refer to 4.6 in textbook 4-17)</a></b></center>
+</h2>
+
+<p>
+The electric potential due to a continuous charge distribution is </p>
+    <p>[mathjax]V=\frac{1}{4\pi \epsilon _{0} } \int \nolimits _{}^{}\frac{dq}{r}[/mathjax]</p>
+<br/>
+
+<p>
+<b class="bfseries">(Useful chart of electric potential in common model can be found in <a href="/course/pdfbook/0/chapter/4/27">4.9 in textbook 4-27)</a></b></p>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Concentric cylinders as parallel plates">
+  <p>
+Now you can see how Eq.&#xA0;<a href="toyx.xhtml#eq:cylcap">1</a>(a) can turn into Eq.&#xA0;<a href="toyx.xhtml#eq:cylcap">1</a>(b). First write the formula you are analyzing in terms of something small. In this case you know from the physical argument that it is when [mathjaxinline]d[/mathjaxinline] is small that the cylinders look like flat plates rolled up, so use [mathjaxinline]b -a=d[/mathjaxinline] to put [mathjaxinline]d[/mathjaxinline] into the formula. And when you say [mathjaxinline]d[/mathjaxinline] is small, you need to know: &#x201C;Small compared to what?" The answer is usually evident in the expression you are analyzing. </p>
+  <p>
+For example, rewrite Eq.&#xA0;<a href="toyx.xhtml#eq:cylcap">1</a> replacing [mathjaxinline]b[/mathjaxinline] with [mathjaxinline]a+d[/mathjaxinline] to get </p>
+  <table id="a0000000008" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation">[mathjax]C_{\rm cyl} = \frac{2 \pi \ell \varepsilon _0}{\ln \frac{a+d}{a}} = \frac{2 \pi \ell \varepsilon _0}{\ln (1+\frac{d}{a})}[/mathjax]</td>
+    </tr>
+  </table>
+  <p>
+ and you see that it is when [mathjaxinline]d[/mathjaxinline] is small compared to [mathjaxinline]a[/mathjaxinline] that you can treat [mathjaxinline]d/a[/mathjaxinline] as the [mathjaxinline]x[/mathjaxinline] in the expression [mathjaxinline]\ln (1+x)[/mathjaxinline] in the table and replace the natural log with its series expansion to get </p>
+  <table id="a0000000009" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation">[mathjax]C_{\rm cyl} = \frac{2 \pi \ell \varepsilon _0}{(\frac{d}{a})}= \frac{2 \pi \ell \varepsilon _0 a}{d}.[/mathjax]</td>
+    </tr>
+  </table>
+  <p>
+ But [mathjaxinline]2 \pi a[/mathjaxinline] is just the width of the unrolled surface so [mathjaxinline]2 \pi a \ell = A[/mathjaxinline] the area of the plate and lo! </p>
+  <table id="a0000000010" class="equation" width="100%" cellspacing="0" cellpadding="7" style="table-layout:auto">
+    <tr>
+      <td class="equation">[mathjax]C_{\rm cyl} \rightarrow \frac{\varepsilon _0 A}{d} = C_{\rm plt}[/mathjax]</td>
+    </tr>
+  </table>
+  <p>
+ when [mathjaxinline]d/a[/mathjaxinline] is small enough. </p>
+</html>

@@ -1,0 +1,21 @@
+
+<html display_name="Solar Sailing">
+ 
+    <p>
+The total power output of the Sun is [mathjaxinline]\sim 4 \times 10^{26}
+[/mathjaxinline] Watts (a NASA fact sheet lists [mathjaxinline]3.846\times 
+10^{26}[/mathjaxinline]). How large a 100% reflective sail is necessary to propel 
+a [mathjaxinline]5000[/mathjaxinline] kilogram spacecraft against the 
+gravitational force of the Sun? Does the size depend on the distance from the
+Sun?
+</p>
+<p> 
+Using the same mathematics, compute the minimum 
+radius of a grain of sand which can survive in the solar system (i.e. 
+would not be blown out by solar radiation pressure). 
+Assume a density of 2.5 gm/cm
+[mathjaxinline]^3[/mathjaxinline]. Note that the sand would be 
+more absorptive than reflective.
+</p>
+  
+</html>

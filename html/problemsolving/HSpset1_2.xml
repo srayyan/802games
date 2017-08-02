@@ -1,0 +1,8 @@
+
+<html display_name="An Electric Dipole">
+  
+    <p>
+We have a charge [mathjaxinline]+q[/mathjaxinline] located at [mathjaxinline]x=a[/mathjaxinline] on the positive x-axis, and a charge [mathjaxinline]-q[/mathjaxinline] located at [mathjaxinline]x=-a[/mathjaxinline] on the negative x-axis. Find the electric field everywhere in space. Using your general expression, find the electric field at a distance [mathjaxinline]r\gg a[/mathjaxinline], i.e. very far from the origin. Show that at this distance the electric falls off as inverse r cubed 
+([mathjaxinline]1/r^3[/mathjaxinline]). </p>
+  
+</html>

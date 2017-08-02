@@ -1,0 +1,16 @@
+
+<html display_name="Capacitors in Series and in Parallel">
+
+    <p>
+    <img src="/static/images/Week3PS1.jpg" width="440"/></p>
+    <p>
+A circuit contains four capacitors [mathjaxinline]C_1, C_2, C_3[/mathjaxinline], and [mathjaxinline]C_4[/mathjaxinline]
+in series and in parallel as shown in the figure. The voltage from point [mathjaxinline]a[/mathjaxinline]
+to point [mathjaxinline]b[/mathjaxinline] is [mathjaxinline]V[/mathjaxinline].
+Find the charge on each capacitor and potential difference across each capacitor in terms of [mathjaxinline]V[/mathjaxinline] 
+and the given capacitances. </p>
+<p>
+Note that Prof. Lewin starts this session by solving for equivalent capacitances in the cases of two capacitors in series or in parallel.
+</p>
+  
+</html>

@@ -1,0 +1,9 @@
+
+<html display_name="Capacitor with Dielectric">
+
+    <p>
+A parallel plate capacitor with plates of area one square meter contains a dielectric slab that completely fills its volume. The electric field between the plates is [mathjaxinline]1.4 \times 10^6[/mathjaxinline] Newtons/Coulomb. The dielectric slab has a dielectric constant [mathjaxinline]K = 4.5[/mathjaxinline]. What is the free charge density on the plates of the capacitor and what is the induced charge density on the dielectric slab? What is the total energy stored in this capacitor? </p>
+    <p>
+Note that there is a typo at time 6:10 (speed 1.0) in this video. Prof. Lewin writes:<br/>[mathjaxinline]\sigma _{fr}=\left( 1-\frac{1}{K} \right)\sigma _{ind}[/mathjaxinline]<br/>The correct equation is: [mathjaxinline]\sigma _{fr}=\frac{\sigma _{ind}}{\left( 1-\frac{1}{K} \right)}[/mathjaxinline] </p>
+
+</html>

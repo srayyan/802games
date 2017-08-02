@@ -1,0 +1,12 @@
+
+<html display_name="Electric Field of a Line Charge">
+
+    <p>
+A long straight wire carries a charge per unit length [mathjaxinline]\lambda[/mathjaxinline]. What is the electric field a distance [mathjaxinline]d[/mathjaxinline] from the wire? Find this field in two different ways, first using Coulomb's Law, and then using Gauss's Law. </p>
+
+<p> The "Chapters 22 and 23" which Prof. Lewin mentions are for the textbook
+used at that time. This information can be found in Chapters 2 &amp; 3 of the 8.02r e-textbook.</p>
+
+<p><b>Note:</b> In the second part of the solution, Prof. Lewin uses the notation "ds" for a small surface element instead of the more typical "dA". Except for this different notation, all the discussion of Gauss' Law is identical to what that you will see elsewhere. </p>
+ 
+</html>

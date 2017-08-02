@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Magnetic Force">
+
+   <!--Heading-->
+
+<p><b>Week 6 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/8/6">8.3</a>, <a href="/course/pdfbook/0/chapter/8/3">9.1-9.2</a>, <a href="/course/pdfbook/0/chapter9/3">9.1-9.2</a></p>
+
+<h2>
+<center> Week 6 W/R Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here--> 
+
+<h2>
+  <p><center><b><a href="/course/pdfbook/0/chapter/8/4">The Magnetic Field</a></b></center></p>
+  <p><center><b><a href="/course/pdfbook/0/chapter/8/4">(Linked to textbook Chapter 8.2)</a></b></center></p> 
+
+</h2>
+
+  <p>In 1820 Hans Oersted discovered that an electric current exerts a force on a magnet, e.g., on a compass needle. This magnetic force is quite different from the electric force. For one thing the force on the magnet is exerted by an electrically neutral system, by moving charges traveling among an equal amount of stationary charge of the opposite sign. From the field point of view, this new force means that the electric current is producing a new field, a &#x201C;magnetic field." </p>
+  <p>
+If a current produces a magnetic field, you might think that two currents, say in parallel wires, will by their respective magnetic fields exert forces on each other. They do. </p>
+  <p>
+Static magnetic fields - magnetic fields that do not vary with time - exert forces only on moving charges. Experiment shows that the force is proportional to the velocity [mathjaxinline]|\vec{v}|[/mathjaxinline]of a charge; it is also proportional to the magnitude [mathjaxinline]q[/mathjaxinline] of the charge. Quite surprising when you first learn about it, the force of a magnetic field on a moving charge depends on the direction of the motion. </p>
+  <p>
+To see what &#x201C;dependence on direction of motion" means, imagine probing a magnetic field with a moving charge. Let's say you can move a charge [mathjaxinline]q[/mathjaxinline] with a constant speed [mathjaxinline]v[/mathjaxinline] in any direction you choose. Now you try various directions and you observe </p>
+  <ul class="itemize">
+    <li>
+      <p>
+the force is always at right angles to [mathjaxinline]\vec{v}[/mathjaxinline], i.e., the force deflects the charge </p>
+    </li>
+    <li>
+      <p>
+the magnitude of the force varies depending on which direction you move [mathjaxinline]q[/mathjaxinline] </p>
+    </li>
+    <li>
+      <p>
+there is a straight-line path of motion along which there is no force at all on the moving [mathjaxinline]q[/mathjaxinline] </p>
+    </li>
+    <li>
+      <p>
+there is another straight line path at right angles to the no-force path along which the magnitude of the force on [mathjaxinline]q[/mathjaxinline] is a maximum [mathjaxinline]F_{\rm max}[/mathjaxinline] </p>
+    </li>
+    <li>
+      <p>
+along all other paths the force is less than [mathjaxinline]F_{\rm max}[/mathjaxinline] and varies as the sine of the angle between [mathjaxinline]\vec{v}[/mathjaxinline] and the line of no-force. </p>
+    </li>
+    <li>
+      <p>
+when you reverse the direction of motion of [mathjaxinline]q[/mathjaxinline], the direction of the force [mathjaxinline]\vec{F}[/mathjaxinline] changes by 180[mathjaxinline]^\circ[/mathjaxinline]. </p>
+    </li>
+  </ul>
+  <p>
+Of course, the magnetic force must also depend on the strength of the magnetic field that is acting on the moving charge. Denoting this strength by [mathjaxinline]B[/mathjaxinline], we can write: </p>
+  <p>[mathjax]F_{\rm max} \propto q|\vec{v}| B.[/mathjax]</p>
+  <p>
+ What is the constant of proportionality you ask? The SI defines the units of [mathjaxinline]B[/mathjaxinline] so that </p>
+  <p>[mathjax]F_{\rm max} = q\, v\, B.[/mathjax]</p>
+  <p>
+ The SI unit of magnetic field strength is called the &#x201C;tesla", abbreviated as T: </p>
+  <p>[mathjax]1 \mbox{ T} = 1 \frac{{\rm N}\cdot {\rm s}}{{\rm C} \cdot {\rm m}} = 1 \frac{\rm kg}{\rm C\cdot s} .[/mathjax]</p>
+  <p>
+The magnetic field is a vector field; [mathjaxinline]B[/mathjaxinline] has a direction, so 
+we should denote it as [mathjaxinline]\vec{B}[/mathjaxinline]. What is its direction? 
+Historically the direction of [mathjaxinline]\vec{B}[/mathjaxinline] was the direction 
+that a compass needle points when placed in the field [mathjaxinline]\vec{B}[/mathjaxinline]. 
+With this choice of direction we can use the vector cross product to summarize all the above 
+properties of field, charge, and motion in the following compact vector equation: </p>
+  <p>[mathjax]\vec{F} = q\,  \vec{v} \times \vec{B}. \label{eq:qvB_ force}[/mathjax]</p>
+  <p><a href="/course/pdfbook/0/chapter/8/16">(Reference: textbook equation Chapter 8 p16 equation (8.5.1))</a></p>
+  <p>
+ Notice that if [mathjaxinline]\vec{v}[/mathjaxinline] is parallel to [mathjaxinline]\vec{B}[/mathjaxinline], then [mathjaxinline]\vec{F} = 0[/mathjaxinline]. In other words, the direction of [mathjaxinline]\vec{B}[/mathjaxinline] corresponds to the direction of motion along which [mathjaxinline]q[/mathjaxinline] experiences zero magnetic force. </p>
+  <p>
+When electric and magnetic fields are both present, the force they exert on a charge [mathjaxinline]q[/mathjaxinline] is </p>
+  <p>[mathjax]\vec{F} = q(\vec{E} +\vec{v} \times \vec{B}) &#160; &#160;&#160;&#160; 
+    [/mathjax]  Lorentz force equation</p>
+  <p>
+ which is referred to as the &#x201C;Lorentz force." </p>
+</html>

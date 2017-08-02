@@ -1,0 +1,7 @@
+
+<html display_name="Lightly Damped Undriven RLC Circuits">
+
+    <p>
+A circuit consists of a battery, a resistor with resistance [mathjaxinline]R[/mathjaxinline], a capacitor with capacitance [mathjaxinline]C[/mathjaxinline], and an inductor with an inductance [mathjaxinline]L[/mathjaxinline]. Apply Faraday's Law to this circuit and deduce the equation that governs the way that the current in this circuit changes with time. Discuss the solution to this equation when the battery emf is zero and we have "light damping", that is when the resistance [mathjaxinline]R[/mathjaxinline] is smaller than [mathjaxinline]2\sqrt {L/C}[/mathjaxinline] </p>
+
+</html>

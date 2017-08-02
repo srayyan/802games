@@ -1,0 +1,44 @@
+{
+  "start": [
+    890, 
+    2780, 
+    6870, 
+    8770, 
+    10930, 
+    13810, 
+    14930, 
+    16149, 
+    18600, 
+    21270, 
+    26470, 
+    29780
+  ], 
+  "end": [
+    2780, 
+    6870, 
+    8770, 
+    10930, 
+    13810, 
+    14930, 
+    16149, 
+    18600, 
+    21270, 
+    22520, 
+    29780, 
+    32210
+  ], 
+  "text": [
+    "WALTER LEWIN: Right-hand corkscrew.", 
+    "Right here, that magnetic field will be in the", 
+    "blackboard.", 
+    "I'll call it B1.", 
+    "Right here, it will be out of the blackboard, but that's", 
+    "irrelevant right now.", 
+    "But it's out of the blackboard.", 
+    "Here it's in the blackboard.", 
+    "And here, I have another wire.", 
+    "I'm going to run a current I2.", 
+    "There will be a force now, on this wire, in the", 
+    "direction I cross B."
+  ]
+}

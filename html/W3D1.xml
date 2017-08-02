@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<html display_name="Week 3 W/Th Pre-class Reading Summary">
+<text>
+
+<!--Heading-->
+
+<p><b>Week 3 W/Th Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/4/3">4.1-4.3</a></p>
+
+<h2>
+<center> Week 3 W/Th Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here-->
+
+
+<h2>
+  <center><b><a href="/course/pdfbook/0/chapter/4/1">A summary of comparison between gravitation and electrostatics (Linked to textbook Chapter 4)</a></b></center>
+</h2>
+    <p>
+Electrostatics and gravitation are very similar because the electrostatic force [mathjaxinline]\mathbf{F}_{e}[/mathjaxinline] also obeys an inverse-square law. In addition, it is also conservative. In the presence of an electric field [mathjaxinline]\mathbf{E}[/mathjaxinline] , in analogy to the gravitational field [mathjaxinline]\vec{\mathbf{g}}[/mathjaxinline] , we define the electric potential difference between two points [mathjaxinline]A\text { and } B[/mathjaxinline] as </p>
+    <p>[mathjax]\Delta V_{e} =-\int \nolimits _{A}^{B}(\vec{F}_{e} /q_{t} )\cdot d\vec{s},  =-\int \nolimits _{A}^{B} \vec{E} \cdot d\vec{s}[/mathjax]</p>
+
+    <p>
+where [mathjaxinline]q_{t}[/mathjaxinline] is a test charge. The potential difference [mathjaxinline]\Delta V_{e}[/mathjaxinline] , which we will now denote just by [mathjaxinline]\Delta V[/mathjaxinline] , represents the negative of the work done per unit charge by the electrostatic force when a test charge [mathjaxinline]q_{t}[/mathjaxinline] moves from points <i class="itshape">A</i> to <i class="itshape">B</i>. Again, electric potential difference should not be confused with electric potential energy. The two quantities are related as follows. Suppose an object with charge [mathjaxinline]q[/mathjaxinline] is moved across a potential difference [mathjaxinline]\Delta V[/mathjaxinline] , then the change in the potential energy of the object is </p>
+    <p>[mathjax]\Delta U=q\Delta V[/mathjax]</p>
+    <p>
+The SI unit of electric potential is volt [mathjaxinline]\lbrack \text {V} ][/mathjaxinline] </p>
+    <p>[mathjax]1\,  \text {volt} =1\,  \,  \text {joule/coulomb (1 V= 1 J/C)}[/mathjax]</p>
+
+    <p>
+When dealing with systems at the atomic or molecular scale, a joule [mathjaxinline]\lbrack \text {J} ][/mathjaxinline] often turns out to be too large as an energy unit. A more useful scale is electron volt [mathjaxinline]\lbrack \text {eV} ][/mathjaxinline] , which is defined as the energy an electron acquires (or loses) when moving through a potential difference of one volt: </p>
+    <p>[mathjax]1\,  \text {eV} =(1.6\times 10^{-19} \text {C} )(1\,  \text {V} )=1.6\times 10^{-19} \,  \text {J}[/mathjax]</p>
+
+<br/>
+
+    <p>
+A summary of comparison between gravitation and electrostatics is tabulated below: </p>
+    <table cellspacing="0" class="tabular" style="table-layout:auto">
+      <tr>
+        <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+          <p>
+ Gravity </p>
+        </td>
+        <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+          <p>
+ Electrostatics</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+          <p>
+Mass <i class="itshape">m</i> </p>
+        </td>
+        <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+          <p>
+ Charge <i class="itshape">q</i></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+          <p>
+Gravitation force [mathjaxinline]\vec{F}_{G} =-G\frac{Mm}{r^{2}} \hat{r}[/mathjaxinline] </p>
+        </td>
+        <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+          <p>
+ Electric force [mathjaxinline]\vec{F}_{e} =k_{e} \frac{Qq}{r^{2}}\hat{r}[/mathjaxinline] </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+          <p>
+Gravitation field [mathjaxinline]=\vec{g}=\vec{F}_g/m[/mathjaxinline] </p>
+        </td>
+        <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+          <p>
+ Electric field [mathjaxinline]=\vec{E}_{e}=\vec{F}_e /q[/mathjaxinline] </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+          <p>
+Potential energy change [mathjaxinline]\Delta U = -\int_A^B \vec{F}_G \cdot d\vec{s}[/mathjaxinline] </p>
+        </td>
+        <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+          <p>
+ Potential energy change [mathjaxinline]\Delta U = -\int_A^B \vec{F}_e \cdot d\vec{s}[/mathjaxinline] </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+          <p>
+Gravitational potential [mathjaxinline]\Delta V_G = -\int_A^B \vec{g} \cdot d\vec{s}[/mathjaxinline] </p>
+        </td>
+        <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+          <p>
+ Electric Potential [mathjaxinline]\Delta V = -\int_A^B \vec{E} \cdot d\vec{s}[/mathjaxinline] </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+          <p>
+Potential function, [mathjaxinline]V_{G} (\infty )=0[/mathjaxinline] : [mathjaxinline]V_{G} =-\frac{GM}{r}[/mathjaxinline] </p>
+        </td>
+        <td style="border-top-style:solid; text-align:left; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+          <p>
+ Potential function, [mathjaxinline]V(\infty )=0[/mathjaxinline] : [mathjaxinline]V=k_{e} \frac{Q}{r}[/mathjaxinline] </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:left">
+          <p>
+[mathjaxinline]|\Delta U_{g} |\,  =mgd[/mathjaxinline] , (constant [mathjaxinline]\vec{\mathbf{g}}[/mathjaxinline] ) </p>
+        </td>
+        <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:left">
+          <p>
+ [mathjaxinline]|\Delta U|\,  =qEd[/mathjaxinline] , (constant [mathjaxinline]\mathbf{E}[/mathjaxinline] )</p>
+        </td>
+      </tr>
+    </table>
+  </text>
+</html>

@@ -1,0 +1,7 @@
+
+<html display_name="An RLC Circuit">
+
+    <p>
+The tuning RLC circuit in an FM radio has an inductance of [mathjaxinline]1 \times 10^{-6}[/mathjaxinline] Henries, but we do not know the resistance or the capacitance. We vary the capacitance to tune into one FM station which broadcasts at an angular frequency [mathjaxinline]\omega = 6 \times 10^8[/mathjaxinline] radians per second. What is the value of the capacitance when we are receiving this station? There is an annoying nearby station which radiates at a frequency [mathjaxinline]\omega = 5.99 \times 10^8[/mathjaxinline] radians per second, but our tuning is so sharp that the power across the resistor due to this second station is only 1% of the power of the station we want to hear at [mathjaxinline]\omega = 6 \times 10^8[/mathjaxinline] radians per second. What is the resistance of the circuit? </p>
+
+</html>

@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Resistivity">
+  
+   <!--Heading-->
+
+<p><b>Week 6 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/6/2">6.1-6.3</a>, <a href="/course/pdfbook/0/chapter/8/3">8.1-8.3</a>, <a href="/course/pdfbook/0/chapter/8/16">8.5</a></p>
+
+<h2>
+<center> Week 6 M/T Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here--> 
+  
+
+<h2>
+  <p><center><b><a href="/course/pdfbook/0/chapter/6/6">Resistance and resistivity</a></b></center></p>
+  <p><center><b><a href="/course/pdfbook/0/chapter/6/6">(Linked to textbook Chapter 6.2)</a></b></center></p> 
+
+</h2>
+  <p>
+Resistance depends both on the geometry of the wire and on the particular material from
+ which the wire is made.The same is true of fluids. Molasses experiences more resistance
+  than water when flowing through a similar pipe. Some of the resistance comes from the
+   geometry of the pipe, and some comes from the different properties of molasses and water.
+</p>
+  <p>
+It is helpful to separate the geometry from the material property. For a cylindrical 
+conductor the effects of the geometry are what your intuition expects: the longer the 
+cylinder the larger the resistance; the larger the cross sectional area of the cylinder,
+ the smaller the resistance. The resistance [mathjaxinline]R[/mathjaxinline] turns out to 
+ be proportional to the length [mathjaxinline]\ell[/mathjaxinline] of the conductor and
+  inversely proportional to its cross sectional area [mathjaxinline]A[/mathjaxinline], and we
+   can write 
+ </p>
+  <p>[mathjax]R = \rho \frac{\ell }{A}[/mathjax]</p>
+  <p>
+ where the constant of proportionality [mathjaxinline]\rho[/mathjaxinline] is called the
+  &#x201C;resistivity" of the conducting material. The resistivity is a property of the
+   material of which the conductor is made; its SI units are ohm-meters. 
+ </p>
+
+<p><a href="/course/pdfbook/0/chapter/6/6">(Reference: textbook equation Chapter 6 p6 equation (6.2.10))</a></p>
+
+  <div id="a0000000003" class="table">
+    <div class="caption"><b>Table 1</b>: <span>Resistivities of some materials</span></div>
+    <center>
+      <table cellspacing="0" class="tabular" style="table-layout:auto">
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+ Material </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ Resistivity [mathjaxinline]\rho[/mathjaxinline] (ohm m) </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ category </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+silver </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ [mathjaxinline]1.59 \times 10^{-8}[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ conductor </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+copper </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ [mathjaxinline]1.72 \times 10^{-8}[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ conductor </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+aluminum </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ [mathjaxinline]2.82 \times 10^{-8}[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ conductor </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+pure carbon (graphite) </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ [mathjaxinline]3.5 \times 10^{-5}[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ semi-conductor </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+            <p>
+fused quartz </p>
+          </td>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+ [mathjaxinline]7.5 \times 10^{17}[/mathjaxinline] </p>
+          </td>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+ insulator </p>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </div>
+  <p>
+You will often see references to conductivity [mathjaxinline]\sigma[/mathjaxinline]. 
+Conductivity is the reciprocal of resistivity: </p>
+  <p>[mathjax]\sigma = \frac{1}{\rho }[/mathjax]</p>
+  <p><a href="/course/pdfbook/0/chapter/6/6">(Reference: textbook equation Chapter 6 p6 equation (6.2.9))</a></p>
+  <p>
+ and its SI units are siemens/meter abbreviated S/m. The historical name for conductivity 
+ was the mho/m. A mho and a siemens are the same thing, but &#x201C;siemens" is coming to 
+ be used more than&#x201C;mho"; SI is not whimsical. </p>
+  <div id="tb:wire_size" class="table">
+    <div class="caption"><b>Table 2</b>: <span>Some standard U.S. wire sizes (AWG)</span></div>
+    <center>
+      <table cellspacing="0" class="tabular" style="table-layout:auto">
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+ gauge </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ diameter (mm) </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ Resistance of copper wire [mathjaxinline]\Omega[/mathjaxinline]/km  </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+12 </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ 2.05232 </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ 5.20864 </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+18 </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ 1.02362 </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ 20.9428 </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+20 </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ 0.8128 </p>
+          </td>
+          <td style="border-top-style:solid; text-align:center; border-top-color:black; border-top-width:1px; border-right:1px solid black">
+            <p>
+ 33.292 </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-left:1px solid black; border-right:1px solid black; border-top-color:black; border-top-width:1px; border-bottom-color:black; text-align:center">
+            <p>
+24 </p>
+          </td>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+ 0.51054 </p>
+          </td>
+          <td style="border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:black; border-right:1px solid black; border-top-color:black; border-top-width:1px; text-align:center">
+            <p>
+ 84.1976 </p>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </div>
+</html>

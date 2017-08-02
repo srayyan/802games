@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+
+
+<html>
+<p>
+<!--<img src="/static/images/icons/textbook_icon.png"/> More information given in <a href="/course/pdfbook/0/chapter/${chapter}/${page}">the text</a>.-->
+<img src="/static/images/icons/textbook_icon.png"/> Suggested reading from the textbook to accompany lecture 27: <a href="/course/pdfbook/0/chapter/13/18">Chapter 13 sections 13.5</a> and <a href="/course/pdfbook/0/chapter/13/39"> 13.9</a> 
+</p>
+<p>
+List of simulations and visualizations is in <a href="/course/pdfbook/0/chapter/13/29">Chapter 13, section 13.8</a> 
+</p>
+<p>
+Solved examples and extra problems are in <a href="/course/pdfbook/0/chapter/13/46">Chapter 13, sections 13.11-12</a>
+</p>
+</html>
+
+

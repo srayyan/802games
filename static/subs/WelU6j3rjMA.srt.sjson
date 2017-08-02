@@ -1,0 +1,32 @@
+{
+  "start": [
+    1220, 
+    5070, 
+    15480, 
+    18960, 
+    20310, 
+    22690, 
+    26560, 
+    30360
+  ], 
+  "end": [
+    5070, 
+    15480, 
+    18960, 
+    20310, 
+    22690, 
+    23940, 
+    30360, 
+    32470
+  ], 
+  "text": [
+    "WALTER LEWIN: The potential over the resistor is always I", 
+    "times R, is then V of P minus V of S. The question now is,", 
+    "what is the potential over the capacitor doing as", 
+    "a function of time?", 
+    "And what is the current doing as a function of time as I", 
+    "charge up this capacitor?", 
+    "And your intuition will help you a great deal, without any", 
+    "fancy differential equations."
+  ]
+}

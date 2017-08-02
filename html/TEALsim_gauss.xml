@@ -1,0 +1,46 @@
+<html>
+<span>
+
+<h1>TEALSim Exploration: Gauss's Law</h1>
+
+ <p>
+This JavaScript simulation illustrates Gauss's Law for a spherical or cylindrical imaginary Gaussian surface, in the presence of positive (orange) or negative (blue) point charges. You begin with one positive charge and one negative charge in the scene. You can add additional positive or negative charges using the Control Panel, or delete all charges present and start again. The charges can be moved around by left clicking and dragging on the charge. You can use the radio buttons on the Control Panel to choose whether your imaginary closed Gaussian surface is a cylinder or a sphere. You can move your Gaussian surface around and change its orientation by using the sliders in the Control Panel. You will see normals to the Gaussian surface (gray arrows) at many points on the surface (see figure at bottom of the page). At those same points you will see the local electric field on the surface due to all the charges in the scene. If you left click and drag in the view, your perspective will change so that you can see the field vector and normal orientation better. If you want to return to the original view hit the "Reset View" button in the Control PanelApplet image here
+ </p>
+
+
+<p>(Please be patient - the simulation may take ~20 seconds to load)</p>
+<iframe id="teal-iframe" src="/static/html/gwt-teal/GaussLawFlux2.html?size=460&amp;graphw=300&amp;graphh=225" width="818" height="900" scrolling="no" frameborder="1" />
+
+<script type="text/javascript">
+function toggleDisplay( id, hidetext, showtext )
+{
+  link = document.getElementById( id + "l" ).childNodes[0];
+
+  with( document.getElementById( id ).style )
+    {
+      if( display == "none" )
+	{
+	  display = "inline";
+	  link.nodeValue = hidetext;
+	}
+      else
+	{
+	  display = "none";
+	  link.nodeValue = showtext;
+	}
+    }
+}
+</script>
+
+ <p>More about this simulation: <a href="javascript:toggleDisplay('ht3','hide','show')" id="ht3l">show</a></p>
+		<div id="ht3" style="display:none">
+
+
+
+
+
+
+</div>
+
+</span>
+</html>

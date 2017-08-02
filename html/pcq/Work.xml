@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Work">
+
+<!--Heading-->
+
+<p><b>Week 3 F Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/4/20">4.7-4.10</a></p>
+
+<h2>
+<center> Week 3 F Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here-->
+
+<h2><center><b><a href="/course/pdfbook/0/chapter/4/1">Work, Energy, and Electric Potential</a></b></center></h2>
+
+<p>Work is the product of force on an object and the distance over which the object moves as 
+the force acts upon it. More precisely, the amount of work [mathjaxinline]dW_ i[/mathjaxinline] 
+done by a force [mathjaxinline]\vec{F}_ i[/mathjaxinline] as the particle moves along a small 
+increment of pathlength [mathjaxinline]d\vec{s_ i}[/mathjaxinline] is </p>
+<p>[mathjax]dW_ i = \vec{F_ i}\cdot d\vec{s_ i}[/mathjax]</p>
+
+<p>The dot product conveniently embodies the property that only parallel components of [mathjaxinline]\vec{F}[/mathjaxinline] and [mathjaxinline]d\vec{s}_ i[/mathjaxinline] contribute to the work. </p>
+<p>    The work done as a particle moves over an extended path made up of [mathjaxinline]N[/mathjaxinline] pieces of [mathjaxinline]d\vec{s}_ i[/mathjaxinline] is found by summation: </p>
+
+<p>[mathjax]W = \sum _ i^ N dW_ i = \sum _ i^ N \vec{F}(\vec{r}_ i) \cdot d\vec{s}_ i[/mathjax]</p>
+
+<p>In the limit of smaller and smaller [mathjaxinline]d\vec{s}_ i[/mathjaxinline] and larger and larger [mathjaxinline]N[/mathjaxinline] this summation becomes the definition of a line integral: </p>
+
+<p>[mathjax]W = \int _{\vec{r}_{\rm A}}^{\vec{r}_{\rm B}}\vec{F}(s)\cdot d\vec{s}[/mathjax]</p>
+
+<p>where [mathjaxinline]s[/mathjaxinline] locates points on the path along which the particle moves as it goes from [mathjaxinline]\vec{r}_ A[/mathjaxinline] to [mathjaxinline]\vec{r}_ B[/mathjaxinline]. </p>
+<p>As in the definition of electric field, it is useful and possible to separate the object in the field from the field itself. That is to say, we can describe the energy properties of the field independently of the energy of some particular object located in the field. </p>
+<p>We use the energy per unit charge to describe the energy properties of the field. This energy per unit charge is called electric potential. Electric potential is the work per unit charge done by the field as a small test charge [mathjaxinline]q_{\rm t}[/mathjaxinline] moves from point A to point B in the field. Electric potential is therefore </p>
+
+<p>[mathjax]dV = \frac{-dW}{q_{\rm t}} = -\vec{E}(s)\cdot d\vec{s}[/mathjax]</p>
+
+<p>and the electric potential difference (usually called just &#x201C;potential difference") between points A and B is </p>
+
+<p>[mathjax]V_ B -V_ A = \Delta V = \int _ A^ B -\vec{E}(s)\cdot d\vec{s}.[/mathjax]</p>
+  
+<p>It is a remarkable property of the electric field that the value of this integral is independent of the path taken going from A to B. All paths give the same value. This path independence can be shown to be a consequence of the mathematical properties of Coulomb's law. </p>
+<p>    Path independence also means that regardless of path the value of the line integral around any closed loop is zero: </p>
+
+<p>[mathjax]\oint \vec{E}(s) \cdot d\vec{s} = 0[/mathjax]</p>
+
+<p>
+  where the circle on the integral sign tells you that this is a line integral around a closed loop. 
+</p>
+<p>As you will learn later, path independence need not hold for time changing electric fields or for magnetic fields. But it always holds for electrostatic fields. </p>
+</html>

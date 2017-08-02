@@ -1,0 +1,23 @@
+{
+  "start": [
+    1180, 
+    3930, 
+    6700, 
+    10030, 
+    15780
+  ], 
+  "end": [
+    3930, 
+    6700, 
+    10030, 
+    12780, 
+    17240
+  ], 
+  "text": [
+    "WALTER LEWIN: VP minus VT.", 
+    "It's clear that it is 0 because there's no electric", 
+    "field here, and there is no electric field anywhere there.", 
+    "So the integral, obviously, is 0.", 
+    "What is the capacitance of this plate?"
+  ]
+}

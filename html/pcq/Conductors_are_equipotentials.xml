@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<html  display_name="Conductors and equipotentials">
+ <h2> Conductors </h2>
+<p>An object is called a conductor because charges are able to move freely in it and through it.
+The substance conducts the charges from one place to another. Metals are good conductors; charges move
+ easily in metals.  The charges that move in metals are electrons.  Because the charges move freely 
+ there can be no electrostatic field
+inside a conductor. As soon as a field is present the charges redistribute themselves until they
+cancel the electric field. The end result is a layer of charge on the surfaces of the conductor. 
+</p> 
+
+<p>Notice, though, there cannot be any component of the electrostatic field
+parallel to the surface of a conductor.  As soon as such a component occurs, it moves the surface
+charges around until they cancel out the component.
+</p>
+
+<p> Therefore, the surface of a conductor is an equipotential, and the electric field from the surface 
+charge is always perpendicular to the surface.  These two statements are equivalent because electric 
+field is always perpendicular to equipotentials.
+</p>
+</html>

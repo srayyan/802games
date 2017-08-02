@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link type="text/css" rel="stylesheet" href="PChargesExtended/Gwtteal.css">
+		<style type="text/css">
+		#appContainer
+		{
+			position:relative;
+			width: 850px;
+			height: 600px;
+		}
+		#loading-message
+		{
+			position:absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -3em;
+			margin-top: -0.5em;
+		}
+		.error-message p
+		{
+			font-size:20px;
+			font-style: bold;
+			color:red;
+		}
+		</style>
+		<title>Two Point Charge</title>
+		<script language="javascript" src="PChargesExtended/PChargesExtended.nocache.js"></script>
+	</head>
+	<body>
+    <script>
+      function gradefn() { 
+        debugger;
+        console.info("npX: ", document.getElementById("npX"));
+        debugger;
+        //return document.getElementById("npX");
+      }
+      
+      function setstate( orig_value ) {
+        console.info( "set state " , orig_value );
+        debugger;
+      }
+      
+      function getstate() {
+        console.info( "get state ");
+        debugger;
+        return "new_value";
+      }
+    </script>
+	
+	
+		<div id="appContainer">
+	 		<p id="loading-message">Please wait... <img src="PChargesExtended/ajax-loader.gif"/></p> 
+	  </div>
+	</body>
+</html>

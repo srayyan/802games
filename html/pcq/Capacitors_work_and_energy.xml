@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Week 5 M/T Pre-class Reading Summary">
+
+
+<!--Heading-->
+
+<p><b>Week 5 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/3/16">3.3</a>, <a href="/course/pdfbook/0/chapter/4/13">4.5</a>, <a href="/course/pdfbook/0/chapter/5/3">5.1-5.4</a></p>
+
+<h2>
+<center> Week 5 M/T Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here-->
+
+
+<h2>
+  <p><center><b><a href="/course/pdfbook/0/chapter/5/8">Capacitors store energy</a></b></center></p>
+  <p><center><b><a href="/course/pdfbook/0/chapter/5/8">(Linked to textbook Chapter 5.3)</a></b></center></p> 
+
+</h2>
+
+  <p>
+Capacitors store and release electric energy. They can do this very quickly. </p>
+  <p>
+Where does the stored energy reside? We can show that for a capacitor the energy is in its electric field; the field itself holds energy; a unit volume holds <a href="/course/pdfbook/0/chapter/3/21">(Reference: textbook equation Chapter 3 p21 equation (3.4.8))</a></p>
+  <p>[mathjax]\frac{1}{2}\epsilon _0 E^2 \mbox{ J/m}^3[/mathjax]</p>
+  <p>
+ All electric fields hold energy just like the electric field in a capacitor. This is beautiful. </p>
+  <p>
+You know there must be energy in a capacitor because it takes work to move charge from one plate to the other. 
+Remember, a capacitor consists of two conductors insulated from each other, and we speak of &#x201C;charging" 
+a capacitor when we take positive charge from one conductor and move it to the other. The result is negative 
+charge of [mathjaxinline]-Q[/mathjaxinline] on one conductor and [mathjaxinline]+Q[/mathjaxinline] on the other 
+and a potential difference of [mathjaxinline]V = \frac{Q}{C}[/mathjaxinline] between them.
+ </p>
+  <p>
+Your physical intuition tells you that it takes work to move charge from one conductor to another. In the parallel plate capacitor to move an element of positive charge [mathjaxinline]dQ[/mathjaxinline] from the negatively charged plate and put it on the positively charged plate, you must pull it away from the attracting negatively charged plate, push it against the direction of the electric field, and force it onto the repelling positively charged plate. If the potential difference between two conductors is [mathjaxinline]V[/mathjaxinline], the work required to move an element of charge [mathjaxinline]dQ[/mathjaxinline] across that potential difference is [mathjaxinline]dW=V\, dQ[/mathjaxinline], and the total work to put [mathjaxinline]Q[/mathjaxinline] on the positively charged plate will be the integral <a href="/course/pdfbook/0/chapter/5/10">(Reference: textbook equation Chapter 5 p10 equation (5.3.1))</a></p>
+  <p>[mathjax]W = \int _0^ Q V\, dQ = \int _0^ Q \frac{Q}{C} dQ = \frac{Q^2}{2C}.[/mathjax]</p>
+  <p>
+You don't need to integrate if you notice that since the potential difference [mathjaxinline]V[/mathjaxinline] 
+rises linearly with the amount of [mathjaxinline]Q[/mathjaxinline], the total charge [mathjaxinline]Q[/mathjaxinline] 
+is moved through an average potential of [mathjaxinline]V/2[/mathjaxinline] and <a href="/course/pdfbook/0/chapter/5/10">(Reference: textbook equation Chapter 5 p10 equation (5.3.2))</a>
+ </p>
+  <p>[mathjax]W = \frac{Q\, V}{2} = \frac{Q^2}{2C} = \frac{C\, V^2}{2}[/mathjax]</p>
+  <p>
+ This work is the energy stored in the capacitor. </p>
+</html>

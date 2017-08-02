@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+
+
+<html>
+<p>
+<!--<img src="/static/images/icons/textbook_icon.png"/> More information given in <a href="/course/pdfbook/0/chapter/${chapter}/${page}">the text</a>.-->
+    <p>
+    Note that there is a typo about 30 seconds (Speed=1.0) into this segment. Prof. Lewin writes that [mathjaxinline]\lambda^{\prime} = 1.0033\lambda[/mathjaxinline]. That should read [mathjaxinline]\lambda^{\prime} = 1.0168\lambda[/mathjaxinline].
+    </p>
+</p>
+</html>
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Gauss tests Coulomb">
+ 
+ <h2> Gauss tests Coulomb </h2>
+  <p>
+Gauss' Law would not be true if the exponent in Coulomb's [mathjaxinline]1/r^2[/mathjaxinline] 
+Law were not exactly [mathjaxinline]2[/mathjaxinline]. Consequently, when Faraday used an 
+ice pail to show that all the charge inside a metal container will go to the outermost 
+surface he was testing both Gauss' Law and Coulomb's law. Refined versions of his ice-pail 
+experiment show that for [mathjaxinline]1/r^{2+\delta }[/mathjaxinline], 
+[mathjaxinline]\delta = 0[/mathjaxinline] to parts in [mathjaxinline]10^{16}[/mathjaxinline]. </p>
+  <p>
+Be impressed. </p>
+</html>

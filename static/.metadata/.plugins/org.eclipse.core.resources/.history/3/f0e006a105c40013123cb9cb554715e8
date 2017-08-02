@@ -1,0 +1,17 @@
+<module rename-to="PChargesExtended">
+	<!-- Use following if Three.js is hosted elsewhere -->
+	<!-- <script src='http://mrdoob.github.com/three.js/build/Three.js'/> -->
+	<script src="Three.js"/>
+	<script src="Stats.js"/>
+
+	<source path="client"/>
+	<source path="client.javax.vecmath"/>
+	<source path="client.javax.media.j3d"/>
+	
+	<inherits name="com.smartgwt.SmartGwt"/>
+
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
+
+	<entry-point class="edu.mit.mitx.gwtteal.client.PChargesExtended"/> 
+</module>

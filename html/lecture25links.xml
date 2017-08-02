@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+
+
+<html>
+<p>
+<!--<img src="/static/images/icons/textbook_icon.png"/> More information given in <a href="/course/pdfbook/0/chapter/${chapter}/${page}">the text</a>.-->
+<img src="/static/images/icons/textbook_icon.png"/> Suggested reading from the textbook to accompany lecture 25: <a href="/course/pdfbook/0/chapter/11/28">Chapter 11, sections 11.7-11.8</a> ,<a href="/course/pdfbook/0/chapter/11/37">Chapter 11, section 11.10</a> and <a href="/course/pdfbook/0/chapter/12/15">Chapter 12, sections 12.4-12.7</a> 
+</p>
+
+<p>
+Solved examples and extra problems are in <a href="/course/pdfbook/0/chapter/11/50">Chapter 11, section 11.13.6</a> and <a href="/course/pdfbook/0/chapter/12/27">Chapter 12, section 12.9</a>
+</p>
+</html>
+
+

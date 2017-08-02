@@ -1,0 +1,8 @@
+
+<html display_name="Parallel Plate Capacitor with a Variable Gap">
+
+    <p>
+A parallel plate capacitor of area [mathjaxinline]A[/mathjaxinline] begins with a distance between the plates of [mathjaxinline]d_1[/mathjaxinline] and a total stored energy of [mathjaxinline]U_1[/mathjaxinline]. If there is no battery in the circuit, what happens to the potential between the plates when we decrease [mathjaxinline]d_1[/mathjaxinline] to [mathjaxinline]d_2[/mathjaxinline], with [mathjaxinline]d_2 &lt; d_1[/mathjaxinline]? What happens to the energy stored in the capacitor when this transition takes place? Now, connect the capacitor to a battery. Answer the same questions for this situation as you did for the previous case.
+ </p>
+
+</html>

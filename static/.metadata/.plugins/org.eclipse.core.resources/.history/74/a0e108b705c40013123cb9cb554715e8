@@ -1,0 +1,938 @@
+package edu.mit.mitx.gwtteal.client;
+
+//GWT
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+import com.google.gwt.animation.client.AnimationScheduler;
+import com.google.gwt.animation.client.AnimationScheduler.AnimationCallback;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.typedarrays.client.Uint8ArrayNative;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CheckBox;
+import com.google.gwt.user.client.ui.FocusWidget;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
+import com.smartgwt.client.widgets.Progressbar;
+
+import edu.mit.mitx.gwtteal.client.java.awt.Dimension;
+import edu.mit.mitx.gwtteal.client.javax.media.j3d.*;
+import edu.mit.mitx.gwtteal.client.javax.media.j3d.utils.geometry.Plane;
+import edu.mit.mitx.gwtteal.client.javax.vecmath.*;
+import edu.mit.mitx.gwtteal.client.teal.sim.*;
+import edu.mit.mitx.gwtteal.client.teal.sim.collision.*;
+import edu.mit.mitx.gwtteal.client.teal.config.Teal;
+import edu.mit.mitx.gwtteal.client.teal.field.Potential;
+import edu.mit.mitx.gwtteal.client.teal.math.RectangularPlane;
+import edu.mit.mitx.gwtteal.client.teal.physics.em.PointCharge;
+//import edu.mit.mitx.gwtteal.client.teal.render.j3d.ArrowNode;
+import edu.mit.mitx.gwtteal.client.teal.render.j3d.BoxNode;
+import edu.mit.mitx.gwtteal.client.teal.render.j3d.FieldLineNode;
+import edu.mit.mitx.gwtteal.client.teal.render.j3d.ShapeNode;
+import edu.mit.mitx.gwtteal.client.teal.render.j3d.SphereNode;
+import edu.mit.mitx.gwtteal.client.teal.sim.spatial.FieldDirectionGrid;
+import edu.mit.mitx.gwtteal.client.teal.sim.spatial.FieldLine;
+import edu.mit.mitx.gwtteal.client.teal.sim.spatial.RelativeFLine;
+import edu.mit.mitx.gwtteal.client.teal.util.ProgressEvent;
+import edu.mit.mitx.gwtteal.client.teal.util.ProgressEventListener;
+import edu.mit.mitx.gwtteal.client.teal.visualization.dlic.DLICGenerator;
+import edu.mit.mitx.gwtteal.client.teal.visualization.image.GwttealBufferedImage;
+
+
+/**
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class PCE implements EntryPoint, AnimationCallback, ProgressEventListener
+{
+  
+  // ### REPLACE THESE PARAMETERS WITH INPUT VALUES OF EDX PYTHON #########################################################################
+  int pc1_value = 3;
+  int pc2_value = -3;
+  int initPc1x;
+  int initPc1y;
+  int initPc2x;
+  int initPc2y;
+  int initPcNx;
+  int initPcNy;
+  int fieldLineLength = 100;
+//### REPLACE THESEPARAMETERS WITH INPUT VALUES OF EDX PYTHON #########################################################################
+  
+	WebGLRenderer renderer;
+  private SimpleUniverse universe;
+  private Camera camera;
+  TransformGroup mouseTG;
+  SimEngine engine;
+  boolean simRunning = false; // when page loads, go for it!
+	private DLICGenerator mGen;
+  Appearance positiveChargeAppearance, neutralChargeAppearance, negativeChargeAppearance, invisibleChargeAppearance;
+  PointCharge pc1, pc2, pcN;
+  FieldDirectionGrid fv;
+  Plane dlicPlane; 
+  Progressbar progressBar;
+	RelativeFLine[] fls;
+	int pointsPerFieldLine;
+	boolean fieldGridEnabled = false, fieldLinesEnabled = true;
+	MouseControls mouse;
+	ArrayList<Widget> disableOnDLIC = new ArrayList<Widget>();
+	Button pausePlayButton;
+	long startTime;
+	
+	TextBox npX, npY;
+	
+    @Override
+    public void onModuleLoad()
+    {
+    	try
+    	{
+    		//testForCanvasWebGL();
+    		RootPanel rootPanel = RootPanel.get("appContainer");
+    		com.google.gwt.canvas.client.Canvas canvas = 
+    				com.google.gwt.canvas.client.Canvas.createIfSupported();
+    	
+    		String sizeString = com.google.gwt.user.client.Window.Location.getParameter("size");
+    		int size = robustParseInt( sizeString );
+    		if ( size <= 0 ) size = 750;
+    		int width = size, height = size;
+    		this.renderer = WebGLRenderer.create(canvas);
+    		this.renderer.setSize(width, height);
+    		this.renderer.setClearColor( Color.create( Teal.Background3DColor ), 1.0);
+    		this.renderer.setSortObjects(false);
+
+    		layoutWebpage( rootPanel, canvas ); // add the canvas in the right spot, as well as any ui
+		
+    		// Send mouse movements to the camera
+    		mouseTG = new TransformGroup();
+    		Transform3D mouseTransform = new Transform3D();
+    		mouse = new MouseControls(canvas, mouseTransform);
+    		mouseTG.setTransform(mouseTransform);
+
+    		createWorld(mouseTG);
+        
+    		this.universe = new SimpleUniverse();
+    		this.universe.addChild(mouseTG);
+     
+    		//this.camera = new OrthographicCamera(-width/2, width/2, height/2, -height/2, -1000, 1000);
+    		this.camera = new PerspectiveCamera(45.0f, 1.0f, 1.0f, 10000.0f);
+    		this.camera.setPosition( new Point3d( 0.0, 0.0, 26 ) );
+    		this.camera.setLookAt( new Vector3d() );
+    		this.camera.setUp( new Vector3d(0.0, 1.0, 0.0 ) );
+        
+    		mouse.setScene(universe.scene);
+    		//ShapeNode[] psn = { pc1.shape, pc2.shape };
+    		ShapeNode[] psn = { pc1.shape, pcN.shape };
+    		mouse.setPickable( psn );
+    		mouse.setCamera(camera);
+    		mouse.setConstrainPlane( dlicPlane, pc1.radius );
+    		AnimationScheduler.get().requestAnimationFrame(this);
+    		DOM.getElementById("loading-message").removeFromParent();
+    	}	
+        catch (Exception e)
+    	{
+        	DOM.getElementById("appContainer").removeFromParent();
+
+    		
+    		HTML html = new HTML("<p>Your browser does not support WebGL, or it is not enabled by default.</p>" +
+    							"<p>This simulation uses WebGL and should work for recent versions of Firefox, Chrome, and Safari: <a href='http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation' title='FAQ'>Getting a WebGL aware browser</a>." +
+    							"There might be issues with your graphics driver: <a href='http://www.khronos.org/webgl/wiki/BlacklistsAndWhitelists' title='FAQ'>Blacklist and whitelist</a>. WebGL is disabled by default on Safari: " +
+    							"<a href='http://onvert.com/guides/enable-webgl-safari' title='FAQ'>How to enable WebGL in Safari</a>.</p>"
+    								, true);
+
+    		// Add them to the root panel.
+    	    HorizontalPanel panel = new HorizontalPanel();
+    	    panel.add(html);
+    	    panel.setStyleName("error-message");
+    	    RootPanel.get().add(panel);
+    	}
+    }
+    
+    
+    
+    
+    
+    private void testForCanvasWebGL()
+    {
+    	try
+    	{
+    		com.google.gwt.canvas.client.Canvas testCanvas = com.google.gwt.canvas.client.Canvas.createIfSupported();
+			  com.google.gwt.canvas.dom.client.Context testContext;
+    		testContext = testCanvas.getContext("experimental-webgl");
+    	}
+    	catch (Exception e)
+    	{
+    		throw new Error("WebGL is not enabled or is not supported");
+    	}
+    }
+    
+    
+    
+    
+    // Create layout of html page    
+    private void layoutWebpage(RootPanel rootPanel,
+    		com.google.gwt.canvas.client.Canvas canvas)
+    {
+    	
+    	// Add two menu panels, one vertical and one horizontal
+    	VerticalPanel vp = new VerticalPanel();
+    	HorizontalPanel hp = new HorizontalPanel();
+    	
+    	// Create sliders
+    	SliderAndTextBox q1Slider = new SliderAndTextBox( "Q1 Charge", -5f, 5f, 2.5f, 100 );
+    	q1Slider.setRoundPrecision(1);
+    	q1Slider.addValueChangeHandler( new SliderAndTextBox.GwttealValueChangeHandler() {
+			public void onValueChange(float val) {
+    			pc1.charge = val; // causes errors?
+    			resetFLBuildDirs();
+    			hideDLIC();
+    		}
+    	});
+    	SliderAndTextBox q2Slider = new SliderAndTextBox( "Q2 Charge", -5f, 5f, -2.5f, 100 );
+    	q2Slider.setRoundPrecision(1);
+    	q2Slider.addValueChangeHandler( new SliderAndTextBox.GwttealValueChangeHandler() {
+			public void onValueChange(float val) {
+    			pc2.charge = val; // causes errors?
+    			resetFLBuildDirs();
+    			hideDLIC();
+    		}
+    	});
+    	
+    	// Add new menu section in the vertical panel
+    	VerticalPanel optionsBar = new VerticalPanel();
+    	optionsBar.addStyleName( "paddedHorizontalPanel" );
+    	optionsBar.add( new HTML("<h2>Parameters</h2>") );
+    	
+    	// Add the sliders to the menu
+    	optionsBar.add( q1Slider );
+    	optionsBar.add( q2Slider );
+    	disableOnDLIC.add( q1Slider );
+    	disableOnDLIC.add( q2Slider );
+
+    	optionsBar.add( new HTML("<h2>Field Visualization</h2>") );
+
+// Button for enabling or disabling Vector field. Is not used
+//    	CheckBox vecFieldCB = new CheckBox( "Show Vector Field Grid" );
+//    	vecFieldCB.setValue( fieldGridEnabled );
+//    	vecFieldCB.addValueChangeHandler( new ValueChangeHandler<Boolean> () {
+//			public void onValueChange(ValueChangeEvent<Boolean> event) {
+//				setFieldGridEnabled( event.getValue() );
+//			}
+//    	} );
+
+    	CheckBox fieldLinesCB = new CheckBox( "Field Lines" );
+    	fieldLinesCB.setValue( fieldLinesEnabled );
+    	fieldLinesCB.addValueChangeHandler( new ValueChangeHandler<Boolean> () {
+			public void onValueChange(ValueChangeEvent<Boolean> event) {
+				setFieldLinesEnabled( event.getValue() );
+			}
+    	} );
+
+//    	optionsBar.add( vecFieldCB );
+    	optionsBar.add( fieldLinesCB );
+
+    	Button grassSeeds = new Button( "Grass Seeds", new ClickHandler () {
+			public void onClick(ClickEvent event) {
+				startTime = System.currentTimeMillis();
+				setSimRunning( false );
+				enableUIforDLIC( false ); // ie disable it
+		        mGen.setField( engine.eField );
+		        mGen.computeFieldImage();
+			}
+    	});
+    	Button elPot = new Button( "Electric Potential", new ClickHandler () {
+			public void onClick(ClickEvent event) {
+				startTime = System.currentTimeMillis();
+				setSimRunning( false );
+				enableUIforDLIC( false ); // ie disable it
+		        mGen.setField( new Potential( engine.eField ) );
+		        mGen.computeFieldImage();
+			}
+    	});
+ 
+    	optionsBar.add( grassSeeds );
+    	optionsBar.add( elPot );
+    	disableOnDLIC.add( grassSeeds );
+    	disableOnDLIC.add( elPot );
+    	
+    	progressBar = new Progressbar();  
+    	progressBar.setHeight(25);
+    	progressBar.setLength(150);  
+    	progressBar.setVertical(false); 
+    	progressBar.setVisible(false);
+    	progressBar.setPercentDone(0);
+    	optionsBar.add(progressBar);
+
+    	HorizontalPanel bottomButtons = new HorizontalPanel();
+
+    	bottomButtons.add( new Button( "Reset camera", new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				mouseTG.getTransform().setIdentity();
+			}
+    	}) );
+
+    	pausePlayButton = new Button( "Pause", new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				setSimRunning( !simRunning );
+			}
+    	});
+    	setSimRunning( simRunning );
+    	bottomButtons.add( pausePlayButton );
+    	disableOnDLIC.add( pausePlayButton );
+
+    	Button reset = new Button( "Reset Simulation", new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				resetCharges();
+			}
+    	});
+    	bottomButtons.add( reset );
+    	disableOnDLIC.add( reset );
+    	
+
+    	npX = new TextBox();
+    	npY = new TextBox();
+    	npX.setReadOnly(true);
+    	npY.setReadOnly(true);
+    	npX.getElement().setId("npX");
+    	npY.getElement().setId("npY");
+    	//npX.setVisible(false);
+      //npY.setVisible(false)
+    	bottomButtons.add( npX );
+    	bottomButtons.add( npY );
+
+    	
+    	hp.add( canvas );
+    	hp.add( optionsBar );
+    	vp.add( hp );
+    	vp.add( bottomButtons );
+    	rootPanel.add( vp );
+
+    	// center the root panel -- define its width
+    	// CSS also has margin: 0 auto applied
+    	int width = vp.getOffsetWidth();
+    	rootPanel.getElement().getStyle().setWidth(width, Unit.PX);
+
+    	// Create frame rate stuff
+    	//FPS this.stats = Stats.create();
+		//FPS RootPanel.getBodyElement().appendChild(this.stats.getElement());
+    }
+
+	protected void setFieldLinesEnabled(Boolean b) {
+		fieldLinesEnabled = b;
+		for ( int i =0; i < fls.length; i ++ )
+			fls[i].shape[0].setVisible(fieldLinesEnabled);
+	}
+
+//	protected void setFieldGridEnabled(Boolean b) {
+//		fieldGridEnabled = b;
+//		for ( int i =0; i < fv.shape.length; i ++ )
+//			fv.shape[i].setVisible(fieldGridEnabled);
+//	}
+
+	protected void setSimRunning( boolean b )
+	{
+		simRunning = b;
+		pausePlayButton.setText( simRunning ?
+				"Pause" : // it is now running
+				"Resume"  // restart it
+				);
+		if ( simRunning )
+			hideDLIC();
+	}
+
+	public void setProgress(ProgressEvent event) {
+		switch (event.getStatus()) {
+		case ProgressEvent.START:
+			progressBar.setVisible(true);
+			progressBar.setPercentDone(0);
+			break;
+		case ProgressEvent.PROGRESS:
+			progressBar.setPercentDone(event.getPercent());
+			break;
+		case ProgressEvent.COMPLETE:
+			progressBar.setVisible(false);
+			drawDLICPlane();
+			enableUIforDLIC(true);
+			break;
+		case ProgressEvent.INTERRUPT:
+			progressBar.setPercentDone(event.getPercent());
+			log( "ChargeByInduction: interrupted! (" + event.getPercent() + ")" );
+			break;
+		default:
+			break;
+		}
+
+	}
+
+    private void enableUIforDLIC(boolean b) {
+    	
+    	mouse.setPickingEnabled(b);
+    	
+    	// TODO make a class for TextBox and Slider together?
+    	Iterator<Widget> it = disableOnDLIC.iterator();
+
+    	while ( it.hasNext() )
+    	{
+    		Widget w = it.next();
+    		if ( w instanceof FocusWidget )
+    			((FocusWidget)w).setEnabled(b);
+    		else if ( w instanceof SliderAndTextBox )
+    			((SliderAndTextBox)w).setEnabled(b);
+    	}
+	}
+
+    private void drawDLICPlane() {
+    	mGen.computeFieldImageCleanup();
+    	drawTexturedPlane( mGen.getImage() );
+
+        long d2 = System.currentTimeMillis();
+        log( "Total time\t" + ( d2 - startTime ) + "\n" );
+    }
+
+    private void drawTexturedPlane(GwttealBufferedImage mImage)
+    {
+      //Create the texture from image
+      Texture imageTexture = new Texture(mImage.data, mImage.width, mImage.height);
+
+      Appearance imageAppearance = new Appearance();
+    	imageAppearance.setTexture(imageTexture);
+    	
+    	//Create the plane that will hold the texture
+    	dlicPlane.obj3d.setVisible( true );
+    	dlicPlane.setAppearance(imageAppearance);
+    	dlicPlane.updateTexture();
+    }
+    
+    private void hideDLIC()
+    {
+    	if ( dlicPlane != null )
+    		dlicPlane.obj3d.setVisible(false);
+    }
+
+	private Material createMaterialFromColor( Color3f color )
+	{
+		Material ret = new Material();
+		Color3f ambCol = new Color3f( color );
+		ambCol.scale( 0.9f );
+		ret.setAmbientColor(ambCol);
+		ret.setDiffuseColor(color);
+		ret.setEmissiveColor(new Color3f());
+		ret.setSpecularColor( color );
+		ret.setShininess( 0.8f );
+		return ret;
+	}
+
+  private Material createMaterialFromColor(
+			edu.mit.mitx.gwtteal.client.java.awt.Color color )
+    {
+  		float[] components = color.getRGBColorComponents(null);
+  		Color3f newColor = new Color3f(components);
+  		return createMaterialFromColor(newColor);
+	  }
+  
+  private Material createInvisibleMaterial( edu.mit.mitx.gwtteal.client.java.awt.Color color )
+  {
+    float[] components = color.getRGBColorComponents(null);
+    Color3f newColor = new Color3f(components);
+    Material ret = new Material();
+    Color3f ambCol = new Color3f( newColor );
+    ambCol.scale( 0.9f );
+    ret.setAmbientColor(ambCol);
+    ret.setDiffuseColor(newColor);
+    ret.setEmissiveColor(new Color3f());
+    ret.setSpecularColor( newColor );
+    ret.setShininess( 0.8f );
+    ret.setOpacity( 0.4f );
+    return ret;
+  }
+    
+  public int getRandomColorByte()
+  {
+  	return (int)(Math.random()*255);
+  }
+
+  public void createWorld(Group g)
+  {
+   	//Appearances
+  	// DLIC plane needs to be initialized with a textured plane
+  	int width = 512;
+  	int height = 512;
+  	int length = width*height*3;
+  	Uint8ArrayNative data = Uint8ArrayNative.create(length);
+    Texture blehTexture = new Texture(data, width, height);
+    Appearance textureAppearance = new Appearance();
+    textureAppearance.setTexture(blehTexture);
+  	
+  	// Charges
+  	positiveChargeAppearance = new Appearance();
+  	positiveChargeAppearance.setMaterial( 
+  			createMaterialFromColor( Teal.PointChargePositiveColor )
+  			);
+
+  	neutralChargeAppearance = new Appearance();
+  	neutralChargeAppearance.setMaterial( 
+  			createMaterialFromColor( Teal.PointChargeNeutralColor )
+  			);
+
+  	negativeChargeAppearance = new Appearance();
+  	negativeChargeAppearance.setMaterial( 
+  			createMaterialFromColor( Teal.PointChargeNegativeColor )
+  			);
+  	
+  	invisibleChargeAppearance = new Appearance();
+  	invisibleChargeAppearance.setMaterial( 
+  	    createInvisibleMaterial( Teal.PointChargeNeutralColor )
+        );
+
+  	Appearance fieldArrowAppearance = new Appearance();
+  	fieldArrowAppearance.setMaterial(
+  			createMaterialFromColor( Teal.DefaultEFieldColor )
+  			);
+  	Appearance fieldLineAppearance = new Appearance();
+  	fieldLineAppearance.setMaterial(
+  			createMaterialFromColor( Teal.DefaultEFieldLineColor )
+  			);
+
+  	Appearance boxFillAppearance = new Appearance();
+  	Material boxFillMaterial = createMaterialFromColor( edu.mit.mitx.gwtteal.client.java.awt.Color.GRAY );
+  	boxFillMaterial.setOpacity( 0.25f );
+  	boxFillAppearance.setMaterial( boxFillMaterial );
+
+  	Appearance boxLineAppearance = new Appearance();
+  	boxLineAppearance.setMaterial(
+  			createMaterialFromColor( edu.mit.mitx.gwtteal.client.java.awt.Color.BLACK )
+  			);
+
+      BranchGroup bg = new BranchGroup();
+
+      // create the physical and rendered objects
+      // adapted from tealsim.physics.em.PCharges constructor
+      engine = new SimEngine( 0.1 ); // simulated seconds
+      engine.setDamping( 0.1 );
+      engine.setGravity(new Vector3d());
+
+      
+      // WALLS
+      // This walls only effect on calculated movement of point charges.
+      // This walls will be invisible and will not effect on human moving of point charges.
+      Vector3d boxPos = new Vector3d();
+      Vector3d boxOr = new Vector3d( 0, 1, 0 );
+      Vector3d boxN = new Vector3d( 0, 0, 1 );
+      double boxLen = 20;
+      double boxWid = 20;
+      double boxHeight = 1;
+      
+      PhysicalObject[] wall = new PhysicalObject[8];
+      WallCollisionController[] wcc = new WallCollisionController[8];
+      
+      Vector3d pos = new Vector3d();
+      Vector3d rel = new Vector3d();
+      Vector3d len = new Vector3d();
+      Vector3d wid = new Vector3d();;
+
+      rel.set(boxOr);                                             // Set rel to unit vector I think in y direction
+      rel.scale(boxLen / 2.);                                     // Scale unit vector to half size for centering box to 0
+      pos.set(boxPos);                                            // I think this line is useless, but unless I didn't write the code I will not remove it ;-)
+      pos.add(rel);                                               // Set (add) the half box-length to set the position
+      wall[0] = new PhysicalObject( 1.0, pos, new Vector3d() );
+      pos.set(boxPos);
+      pos.sub(rel);
+      wall[1] = new PhysicalObject( 1.0, pos, new Vector3d() );
+      len.cross(boxN, boxOr);
+      len.scale(boxWid);
+      wid.set(boxN);
+      wid.scale(boxHeight);
+      wcc[0] = new WallCollisionController( wall[0] );
+      wcc[1] = new WallCollisionController( wall[1] );
+      wcc[0].setEdges(len, wid);
+      wcc[1].setEdges(len, wid);
+
+      rel.cross(boxN, boxOr);
+      rel.scale(boxWid / 2.);
+      pos.set(boxPos);
+      pos.add(rel);
+      wall[2] = new PhysicalObject( 1.0, pos, new Vector3d() );
+      pos.set(boxPos);
+      pos.sub(rel);
+      wall[3] = new PhysicalObject( 1.0, pos, new Vector3d() );
+      len.set(boxOr);
+      len.scale(boxLen);
+      wid.set(boxN);
+      wid.scale(boxHeight);
+      wcc[2] = new WallCollisionController( wall[2] );
+      wcc[3] = new WallCollisionController( wall[3] );
+      wcc[2].setEdges(len, wid);
+      wcc[3].setEdges(len, wid);
+      
+      for ( int i =0; i < 4; i ++ )
+      {
+        wcc[i].setElasticity( 1.0 );
+        wall[i].setCollisionController( wcc[i] );
+        wall[i].setColliding( true );
+        wall[i].setMoveable( false );
+      	engine.addObject( wall[i] );
+      }
+      
+      
+      ///// INITIALIZATION OF SIMULATION OBJECTS /////
+      pc1 = new PointCharge();
+      pc1.radius = 0.6;
+      pc1.charge = pc1_value;
+      pc1.setMass(1);
+      pc1.setColliding(true);
+      SphereCollisionController sccx = new SphereCollisionController(pc1);
+      sccx.setRadius( pc1.radius );
+      sccx.setTolerance(0.1);
+      pc1.setCollisionController(sccx);
+      engine.addObject( pc1 );
+  	  pc1.shape = new SphereNode( pc1.radius, 20, negativeChargeAppearance );
+  	  bg.addChild( pc1.shape );
+
+  	  // point charge 2
+      pc2 = new PointCharge();
+      pc2.setMoveable(false);
+      pc2.radius = 0.6;
+      pc2.charge = pc2_value;
+      pc2.setMass(1);
+      pc2.setColliding(true);
+      sccx = new SphereCollisionController(pc2);
+      sccx.setRadius( pc2.radius );
+      sccx.setTolerance(0.1);
+      pc2.setCollisionController(sccx);
+      engine.addObject( pc2 );
+      pc2.shape = new SphereNode( pc2.radius, 20, invisibleChargeAppearance );
+  	  bg.addChild( pc2.shape );
+  	  
+  	  // point charge N - neutral point charge with no effect on simulation that will be moved by the student
+      pcN = new PointCharge();
+      //pcN.setMoveable(true);
+      pcN.radius = 0.6;
+      pcN.charge = 0.0;
+      pcN.setMass(1);
+      pcN.setColliding(false);
+      pcN.setGeneratingE(false);
+      pcN.setGeneratingP(false);
+      sccx = new SphereCollisionController(pcN);
+      sccx.setRadius( pcN.radius );
+      sccx.setTolerance(0.1);
+      pcN.setCollisionController(sccx);
+      engine.addObject( pcN );
+      pcN.shape = new SphereNode( pcN.radius, 20, invisibleChargeAppearance );
+      bg.addChild( pcN.shape );
+
+//    	// add the arrows
+//        fv = new FieldDirectionGrid( new Vector3d(), 20, 20 );
+//        fv.setField( engine.eField );
+//        int res = 12;
+//        fv.setResolution( res );
+//
+//        ArrowNode[] arrows = new ArrowNode[ res * res ];
+//        for (int i = 0; i < res * res; i++)
+//        {
+//        	ArrowNode arrow = new ArrowNode( new Vector3d(), new Vector3d( 0, 0, 1 ), fieldArrowAppearance );
+//        	arrows[i] = arrow;
+//        	bg.addChild( arrow );
+//        }
+//        fv.shape = arrows;
+
+      
+      // DO field lines
+      //fls = new RelativeFLine[16];
+      fls = new RelativeFLine[8];
+      int i =0;
+      
+      Collection<RelativeFLine> tempLines;
+      tempLines = RelativeFLine.create8Lines(pc1, engine.eField);
+      Iterator<RelativeFLine> it = tempLines.iterator();
+      while (it.hasNext())
+      	fls[i++] = it.next();
+
+      //tempLines = RelativeFLine.create8Lines(pc2, engine.eField);
+      //it = tempLines.iterator();
+      //while (it.hasNext())
+      //	fls[i++] = it.next();
+
+      resetFLBuildDirs();
+
+      fls[0].setKMax(fieldLineLength);
+      pointsPerFieldLine = fls[0].getKMax();
+      Point3d[] points = new Point3d[ pointsPerFieldLine ];
+      for (i = 0; i < pointsPerFieldLine; i++)
+   		points[i] = new Point3d();
+
+      for (i = 0; i < fls.length; i++)
+      {
+        fls[i].setKMax(fieldLineLength);
+      	fls[i].setColorMode(FieldLine.COLOR_FLAT);
+      	fls[i].shape = new FieldLineNode[1];
+      	fls[i].shape[0] = new FieldLineNode(points, fieldLineAppearance );
+      	bg.addChild( fls[i].shape[0] );
+      }	
+      
+      
+      // Visible Box with no effect to point charges!
+      // First box defines outer limits
+      BoxNode boxNode = new BoxNode(20, 20, 1, boxFillAppearance, boxLineAppearance);
+      bg.addChild(boxNode);
+      // Defines inner limits for moving neutral pointcharge
+      BoxNode boxNode2 = new BoxNode(10, 10, 1, 5, 5, 0, boxFillAppearance, boxLineAppearance);
+      bg.addChild(boxNode2);
+
+      
+      // Invisible Box that shrinks the area of movements by hand. No affect on calculated movements! 
+      dlicPlane = new Plane( 20, 20, 1, 1, textureAppearance, true );
+      dlicPlane.obj3d.setVisible(false);
+      bg.addChild(dlicPlane);
+      
+      //dlicPlane = new Plane( 10, 10, 1, 1, 5,5, textureAppearance, true );
+      //dlicPlane.obj3d.setVisible(true);
+      //bg.addChild(dlicPlane);
+      
+      initialChargePositions();
+      setFieldLinesEnabled( fieldLinesEnabled );
+  	  //setFieldGridEnabled( fieldGridEnabled );
+      updateScene();
+      
+      // create the DLIC generator
+      mGen = new DLICGenerator();
+      mGen.setSize(new Dimension(512,512)); // 512, 512
+      RectangularPlane rec = new RectangularPlane(new Vector3d(-20.0, -20.0, 0.0), new Vector3d(-20.0, 20.0, 0.0), new Vector3d(20.0, 20.0, 0.0));
+      mGen.setComputePlane(rec);
+      mGen.addProgressEventListener(this);
+      
+      // Set up the ambient light
+      Color3f ambientColor = new Color3f(0.5f, 0.5f, 0.5f);
+      AmbientLight ambientLightNode = new AmbientLight(ambientColor);
+
+      // Set up the directional lights
+      Color3f light1Color = new Color3f(1.0f, 1.0f, 0.9f);
+      Color3f light2Color = new Color3f(0.3f, 0.3f, 0.4f);
+      Vector3f light1Direction  = new Vector3f(4.0f, -7.0f, -12.0f);
+      Vector3f light2Direction  = new Vector3f(-6.0f, -2.0f, -1.0f);
+      Vector3f light3Direction  = new Vector3f(-6.0f, 2.0f, 1.0f);
+
+      DirectionalLight light1 = new DirectionalLight(light1Color, light1Direction);
+      DirectionalLight light2 = new DirectionalLight(light2Color, light2Direction);
+      DirectionalLight light3 = new DirectionalLight(light1Color, light3Direction);
+
+      bg.addChild(ambientLightNode);
+      bg.addChild(light1);
+      bg.addChild(light2);
+      bg.addChild(light3);
+
+      g.addChild(bg);
+    }
+        
+	private void initialChargePositions()
+	{
+	  pc1.setPosition(new Vector3d(5, 2, 0));
+    pc1.setVelocity( new Vector3d() );
+    
+    double pc2y = Math.random() * 18 - 9;
+    double pc2x = 0;
+    if ( pc2y > (-1) ){
+      pc2x = Math.random() * 8 - 9;
+    }
+    else{
+      pc2x = Math.random() * 18 - 9;
+    }
+    pc2.setPosition(new Vector3d(pc2x,pc2y, 0));
+    pc2.setVelocity( new Vector3d() );
+    
+    pcN.setPosition(new Vector3d(-9, -9, 0));
+    pcN.setVelocity( new Vector3d() );
+  }
+
+	protected void resetCharges()
+	{
+    setSimRunning( false );
+    initialChargePositions();
+    updateScene();
+    engine.reset();
+    hideDLIC();
+	}
+	
+	public void execute(double timestamp)
+	{
+		if ( simRunning && mouse.dragStatus != MouseControls.SELECT_DRAG )
+			engine.nextStep();
+
+		updateScene();
+		
+    // Force update of values.
+    mouseTG.updateTransform();
+		this.renderer.render(this.universe, this.camera);
+		//FPS this.stats.update();
+		AnimationScheduler.get().requestAnimationFrame(this);
+	}
+
+	private void updateScene()
+	{
+		// the maxPxDist is for when the charges go too far away, you can know that happened
+		double maxDist = 25.0;
+
+		// charge 1
+		if ( pc1.shape.isSelected )
+		{
+			Vector3d pos = pc1.getPosition();
+			pos.add(mouse.getObjectTransform());
+			
+			if (pos.x < 0){
+			  pos.x = 0;
+			}
+			if (pos.y < 0){
+        pos.y = 0;
+      }
+			if (pos.x > 10){
+        pos.x = 10;
+      }
+			if (pos.y > 10){
+        pos.y = 10;
+      }
+			pc1.setPosition(pos);   
+			engine.requestReorder( pc1 );
+		}
+		setChargePosition( pc1, maxDist );
+		setChargeAppearance(pc1);
+		
+		
+		// charge 2
+		if ( pc2.shape.isSelected )
+		{
+			Vector3d pos = pc2.getPosition();
+			pos.add(mouse.getObjectTransform());
+			pc2.setPosition(pos);
+			engine.requestReorder( pc2 );
+		}
+		setChargePosition( pc2, maxDist );
+		setChargeAppearance(pc2);
+		
+  	// charge N
+    if ( pcN.shape.isSelected )
+    {
+      Vector3d pos = pcN.getPosition();
+      pos.add(mouse.getObjectTransform());
+      pcN.setPosition(pos);
+      engine.requestReorder( pcN );
+      npX.setText(Integer.toString((int)pos.x));
+      npY.setText(Integer.toString((int)pos.y));
+    }
+    setChargePosition( pcN, maxDist );
+    setChargeAppearance(pcN);
+
+		if ( mouse.getObjectTransform().length() > 0 )
+			hideDLIC();
+		
+		mouse.clearObjectTransform();
+
+		if ( fieldGridEnabled )
+		{
+			fv.updateArrows();
+			for ( int i =0; i < fv.xres * fv.yres; i ++ )
+			{
+				// arrows freak out if field is 0
+				if ( fv.arrowDir[i].length() <  1e-2 )
+					fv.shape[i].setVisible( false );
+				else
+				{
+					fv.shape[i].setPosDir( fv.arrowPos[i], fv.arrowDir[i] );
+					fv.shape[i].setVisible( true );
+				}
+			}
+		}
+		
+		// field lines
+		if ( fieldLinesEnabled )
+		{
+			Point3d[] pcPos = {
+					new Point3d( pc1.getPosition() ),
+					//new Point3d( pc2.getPosition() )
+			};
+			Point3d[] data = new Point3d[ pointsPerFieldLine ];
+			for ( int i =0; i < fls.length; i ++ )
+			{
+				fls[i].setTerminators( pcPos, 28.28 ); // TODO MAGIC #
+				fls[i].getData( data ); // it updates it as well
+				fls[i].shape[0].setCoordinates(data);
+			}
+		}
+	}
+
+	private void resetFLBuildDirs()
+	{
+		for ( int i =0; i < fls.length; i ++ )
+		{
+			double ch = ((PointCharge)fls[i].mElement).charge;
+			if ( ch > 0 )
+				fls[i].setBuildDir( FieldLine.BUILD_POSITIVE );
+			else if ( ch < 0 )
+				fls[i].setBuildDir( FieldLine.BUILD_NEGATIVE );
+			else
+				fls[i].setBuildDir( FieldLine.BUILD_BOTH );
+		}
+	}
+	
+	public void setChargePosition( PointCharge ch, double maxDist )
+	{
+		Vector3d pos = new Vector3d( ch.getPosition() );
+		if ( pos.length() > maxDist ) // not too far!
+			pos.scale( maxDist / pos.length() );
+			
+		ch.shape.setPosition( pos );
+	}
+	
+	public void setChargeAppearance( PointCharge ch ) // CHARGE APPERANCE ###################################################################
+	{
+		Appearance newApp, oldApp = ch.shape.mShape.getAppearance();
+		
+		if ( ch.charge > 0 )
+			newApp = positiveChargeAppearance;
+		else if ( ch.charge < 0 )
+			newApp = negativeChargeAppearance;
+		else
+			newApp = neutralChargeAppearance;
+		
+		if ( oldApp != newApp )
+		{
+			ch.shape.mShape.setAppearance( newApp );
+			ch.shape.mShape.updateAppearance();
+		}
+
+	}
+	
+	
+	public static int robustParseInt( String str )
+	{
+		int value;
+		if ( str == null )
+			str = "";
+		str = str.replaceAll( "[^\\d\\.\\-]", "" ); // all but 0-9, decimal, negative
+		try
+		{
+			value = (int)Math.round( Double.parseDouble( str ) );
+		}
+		catch ( NumberFormatException e )
+		{
+			value = 0;
+		}
+		return value;
+	}
+
+	public static native void log( String msg )
+	/*-{
+		console.log( msg );
+	}-*/;
+	
+	//public static native void passParameters( double charge, boolean grounded )
+	///*-{
+		//$wnd.passResultParameters( [ charge, grounded ] );
+	//}-*/;
+}

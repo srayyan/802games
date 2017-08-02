@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="effects of the test charge">
+  <p>
+The effects of [mathjaxinline]\vec{g}[/mathjaxinline] are negligible compared to the effects of [mathjaxinline]\vec{E}[/mathjaxinline]. But what about the electric field produced by the probe charge? Is that negligible compared to [mathjaxinline]\vec{E}(\vec{r}_{\rm f})[/mathjaxinline]? </p>
+  <p>
+To answer such a question you need to know how far the probe charge is from the charges that are the source of [mathjaxinline]\vec{E}(\vec{r}_{\rm f})[/mathjaxinline]. You need some model of how [mathjaxinline]\vec{E}[/mathjaxinline] was produced. Two sheets of charge, one positive and the other negative, 1&#xA0;cm apart and with their charge spread uniformly over the sheet will produce a (nearly) constant E field in the volume between the plates. </p>
+  <p>
+If the test charge is half way between the plates, which is where it will be the furthest it can be from the source charges, what electric field does the test charge produce at the nearest point on a plate? </p>
+</html>

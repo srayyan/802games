@@ -1,0 +1,9 @@
+
+<html display_name="Faraday's Law Applied to Circuits">
+
+    <p>
+How does a circuit containing a solenoid work, from the point of view of Faraday's Law? Consider a circuit carrying current [mathjaxinline]I[/mathjaxinline], consisting of a battery, a resistor, and a solenoid with [mathjaxinline]N[/mathjaxinline] turns, lenght [mathjaxinline]l[/mathjaxinline], and radius [mathjaxinline]r[/mathjaxinline]. What is the magnetic field inside the solenoid? Use Ampere's Law without the displacement term to calculate this field. Now apply Faraday's Law to this circuit, choosing a closed loop for Faraday's Law carefully. You will find that choosing an open surface whose boundary is this closed loop is difficult, so think carefully about this. You will in this process derive an equation for the self-inductance of the solenoid. </p>
+    <p>
+Now consider a circuit consisting of a battery, a resistor, and a solenoid, all in series. Assume that current has been flowing through this circuit for a long time. Now, we restart our clock, and at [mathjaxinline]t = 0[/mathjaxinline], we close a switch that cuts the battery out of the circuit, so that we have left only a closed circuit containing the resistor and the solenoid. Use Faraday's Law to find the current in this closed circuit as a function of time. </p>
+ 
+</html>

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<html display_name="Week 2 M/T Pre-class Reading Summary">
+<text>
+<p>
+<b>Week 2 M/T Reading Assignment:</b>
+</p>
+<p>
+From the book <a href="/course/pdfbook/0/chapter/2/15">2.9-2.13</a>, <a href="/course/pdfbook/0/chapter/2/45">2.14.5-2.14.6</a>
+</p>
+
+<h2>
+<center> Week 2 M/T Pre-class Reading Summary </center>
+</h2>
+
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected of you to know before comign to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<br/>  
+<h2>
+<center><b><a href="/course/pdfbook/0/chapter/1/22">Field Line Representation (Linked to textbook section 1.8.2)</a></b></center>
+</h2>
+<br/>    
+<p>Faraday called the field lines for electric field "lines of force." </p>
+<p>
+A field line is a line in space that is everywhere tangent to the local vector field.</p>
+
+<p>
+<center><img src="/static/html/W2D1_preClass-fig001.jpg" width="330"/></center>
+</p>
+<p>
+<center><b class="bfseries">Figure 1.8.2</b> A "vector field" representation of the field of two point charges, and a "field line" representation of the same field. The field lines are everywhere tangent to the local field direction. </center></p>
+
+<br/>   
+<h2>
+<center><b><a href="/course/pdfbook/0/chapter/2/4">Principle of Super Position (Linked to Textbook Section 2.3)</a></b></center>
+</h2> 
+<br/>
+<p>
+Coulomb's law applies to any pair of point charges. When more than two charges are present, the net force on any one charge is simply the vector sum of the forces exerted on it by the other charges. For example, if three charges are present, the resultant force experienced by [mathjaxinline]q_{3}[/mathjaxinline] due to [mathjaxinline]q_{1}[/mathjaxinline] and [mathjaxinline]q_{2}[/mathjaxinline] will be 
+</p>
+<p>
+[mathjax]\vec{F} _{3} =\vec{F} _{13} +\vec{F} _{23}[/mathjax]</p>
+
+<br/>
+<h2>
+<center><b><a href="/course/pdfbook/0/chapter/2/11">Electric Dipole(Linked to Textbook Section 2.7)</a></b></center>
+</h2> 
+<br/>    
+<p>
+An electric dipole consists of two equal but opposite charges, [mathjaxinline]+q[/mathjaxinline] and [mathjaxinline]-q[/mathjaxinline] , separated by a distance [mathjaxinline]2a[/mathjaxinline] , as shown in Figure 2.7.1. </p>
+<p>
+<center><img src="/static/html/W2D1_preClass-fig003.jpg" width="330"/></center>
+</p>
+<p>
+<center><b class="bfseries">Figure 2.7.1</b> Electric dipole </center></p>
+<p>
+By definition, the dipole moment vector [mathjaxinline]\vec{\mathbf{p}}[/mathjaxinline] points from [mathjaxinline]-q[/mathjaxinline] to [mathjaxinline]+q[/mathjaxinline] (in the [mathjaxinline]+y[/mathjaxinline] - direction) and has magnitude [mathjaxinline]p=2qa[/mathjaxinline] , where [mathjaxinline]q&gt;0[/mathjaxinline] , </p>
+<p>[mathjax]\vec{\mathbf{p}} =2qa\,  \hat{\mathbf{j}}[/mathjax]</p>
+
+<br/>
+<h2>
+<center><b><a href="/course/pdfbook/0/chapter/2/13">Dipole in Electric Field(Linked to Textbook Section 2.)</a></b></center>
+</h2> 
+<br/>    
+<p>
+What happens when we place an electric dipole in a uniform field [mathjaxinline]\vec{\mathbf{E}} =E\,  \hat{\mathbf{i}}[/mathjaxinline] , with the dipole moment vector making an angle with the [mathjaxinline]x[/mathjaxinline] -axis? </p>
+<p>
+<center><img src="/static/html/W2D1_preClass-fig005.jpg" width="330"/></center>
+</p>
+<p>
+<center>Figure 2.8.1 <b class="bfseries">Electric dipole placed in a uniform field.</b> </center></p>
+<p>
+As seen from Figure 2.8.1, because each charge experiences an equal but opposite force due to the field, the net force on the dipole is [mathjaxinline]\vec{\mathbf{F}} _{\text {net} } =_{+} +_{-} =0[/mathjaxinline] . Even though the net force vanishes, the field exerts a torque a toque on the dipole. The torque about the mid-point of the dipole is </p>
+<p>[mathjax]\vec{\tau} =\vec{r}_+ \times \vec{F}_+ + \vec{r}_- \times \vec{F}_-[/mathjax]</p>
+<p>
+The direction of the torque is [mathjaxinline]-\hat{\mathbf{k}}[/mathjaxinline] , or into the page. The effect of the torque is to rotate the dipole <i class="itshape">clockwise</i> so that the dipole moment [mathjaxinline]\vec{\mathbf{p}}[/mathjaxinline] becomes aligned with the electric field . And the general expression for torque is </p>
+<p>[mathjax]\vec{\tau} =\vec{p} \times \vec{E}[/mathjax]</p>
+
+<br/>
+<h2>
+<center><b><a href="/course/pdfbook/0/chapter/2/4">Coulom's Law(Linked to Textbook Section 2.3)</a></b></center>
+</h2> 
+<br/>
+<p>
+The electric force exerted by a charge [mathjaxinline]q_1[/mathjaxinline] on a second charge [mathjaxinline]q_2[/mathjaxinline] is given by <b class="bfseries">Coulomb's law</b>: </p>
+<p>[mathjax]\vec{\mathbf{F}} _{12} =k_{e} \frac{q_{1} q_{2} }{r^{2} } \hat{r} =\frac{1}{4\pi \epsilon _{0} } \frac{q_{1} q_{2} }{r^{2} }\hat{r}[/mathjax]
+</p>
+<p>
+where [mathjaxinline]k_{e} =\frac{1}{4\pi \epsilon _{0} } =8.99\times 10^{9} \text { N} \cdot \text {m} ^{\text {2} } /\text {C} ^{\text {2} }[/mathjaxinline] is the Coulomb constant. </p>
+
+<br/>
+<h2>
+<p><center><b>Electric Field </b></center></p>
+<p><center><a href="/course/pdfbook/0/chapter/2/9"> (Linked to Textbook Section 2.6)</a><a href="/course/pdfbook/0/chapter/2/17"> (Linked to Textbook Section 2.10)</a></center></p>
+</h2> 
+<br/>
+
+<p>
+[mathjaxinline]\bullet[/mathjaxinline]  The <b class="bfseries">electric field<a href="/course/pdfbook/0/chapter/2/9">(Linked to Textbook Section 2.6)</a></b> at a point in space is defined as the electric force acting on a test charge [mathjaxinline]q_{0}[/mathjaxinline] divided by [mathjaxinline]q_{0}[/mathjaxinline] : </p>
+<p>[mathjax]\vec{\mathbf{E}} \lim _{q_{0} \rightarrow 0}^{} \frac{\vec{\mathbf{F}} _{e} }{q_{0} }[/mathjax]</p>
+
+<p>
+[mathjaxinline]\bullet[/mathjaxinline]  The electric field at a distance [mathjaxinline]r[/mathjaxinline] from a charge [mathjaxinline]q[/mathjaxinline] is </p>
+<p>[mathjax]\vec{\mathbf{E}} =\frac{1}{4\pi \epsilon _{0} } \frac{q}{r^{2} } \hat{\mathbf{r}}[/mathjax]</p>
+
+<p>
+[mathjaxinline]\bullet[/mathjaxinline]  Using the <b class="bfseries">superposition principle</b>, the electric field due to a collection of point charges, each having charge [mathjaxinline]q_{i}[/mathjaxinline] and located at a distance [mathjaxinline]r_{i}[/mathjaxinline] away is </p>
+<p>[mathjax]\vec{\mathbf{E}} =\frac{1}{4\pi \epsilon _{0} } \sum \limits _{i}^{}\frac{q_{i} }{r_{i}^{2} } \hat{\mathbf{r}} _{i}[/mathjax]</p>
+    
+<p>
+[mathjaxinline]\bullet[/mathjaxinline]  <b class="bfseries">The electric field at a point in space due to a continuous charge<a href="/course/pdfbook/0/chapter/2/17">(Linked to Textbook Section 2.10)</a></b> element [mathjaxinline]dq[/mathjaxinline] is </p>
+<p>[mathjax]d\vec{\mathbf{E}} =\frac{1}{4\pi \epsilon _{0} } \frac{dq}{r^{2} } \hat{\mathbf{r}}[/mathjax]</p>
+    
+<p>
+[mathjaxinline]\bullet[/mathjaxinline]  Using the superposition principle, the total electric field is the vector sum (integral) of all these infinitesimal contributions: </p>
+<p>[mathjax]\vec{\mathbf{E}} =\frac{1}{4\pi \epsilon _{0} } \int \nolimits _{V}^{}\frac{dq}{r^{2} } \,  \hat{\mathbf{r}}[/mathjax]</p>
+
+
+</text>
+</html>

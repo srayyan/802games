@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link type="text/css" rel="stylesheet" href="AmperesLawExtended/Gwtteal.css">
+    <script src="jschannel.js"></script>
+    <script src="three.min.js"></script>
+		<style type="text/css">
+		#appContainer
+		{
+			position:relative;
+			width: 850px;
+			height: 600px;
+		}
+		#loading-message
+		{
+			position:absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -3em;
+			margin-top: -0.5em;
+		}
+		.error-message p
+		{
+			font-size:20px;
+			font-style: bold;
+			color:red;
+		}
+		table.paddedHorizontalPanel h2 {
+			margin: 1em 0 0 0;
+			font-size: 1em;
+		}
+		
+		button.gwt-Button {
+			width: 20em;
+		}
+		
+		.lessMargin {
+			height: 64px !important;
+		}
+		</style>
+		<title>Ampere's Law Extened</title>
+		<script language="javascript" src="AmperesLawExtended/AmperesLawExtended.nocache.js"></script>
+	</head>
+	<body>
+		<div id="appContainer">
+	 		<p id="loading-message">Please wait... <img src="AmperesLawExtended/ajax-loader.gif"/></p> 
+	  </div>
+    
+    <script language="javascript">
+	  	  
+		  var e_initValues  = [[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0]];
+		  var e_showHide;
+		  var e_curDummyPos = [[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0],[0.0,0.0,0.0]];
+		  
+		  var channel;
+	    var statestr;
+	    
+	    // Establish a channel only if this application is embedded in an iframe.
+	    // This will let the parent window communicate with this application using
+	    // RPC and bypass SOP restrictions.
+	    if (window.parent !== window) {
+	        channel = Channel.build({
+	            window: window.parent,
+	            origin: "*",
+	            scope: "JSInput"
+	        });
+	        channel.bind("getGrade", getGrade);
+	        channel.bind("getState", getState);
+	        channel.bind("setState", setState);
+	    }
+	    
+	    handleResponse = function(e)
+	    {
+	      console.info(' receiving postMessage');
+		    
+		    e_initValues[0][0] = e.data.split(':')[0];
+	      e_initValues[0][1] = e.data.split(':')[1];
+	      e_initValues[0][2] = e.data.split(':')[2];
+	      
+	      e_initValues[1][0] = e.data.split(':')[3];
+	      e_initValues[1][1] = e.data.split(':')[4];
+	      e_initValues[1][2] = e.data.split(':')[5];
+	        
+	      e_initValues[2][0] = e.data.split(':')[6];
+	      e_initValues[2][1] = e.data.split(':')[7];
+	      e_initValues[2][2] = e.data.split(':')[8];
+	        
+	      e_initValues[3][0] = e.data.split(':')[9];
+	      e_initValues[3][1] = e.data.split(':')[10];
+	      e_initValues[3][2] = e.data.split(':')[11];
+	        
+	      e_initValues[4][0] = e.data.split(':')[12];
+	      e_initValues[4][1] = e.data.split(':')[13];
+	      e_initValues[4][2] = e.data.split(':')[14];
+	      
+	      e_showHide = e.data.split(':')[15];
+	      
+	      console.info('dc1: ', e_initValues[0][0], e_initValues[0][1], e_initValues[0][2], ' dc2: ', e_initValues[1][0], e_initValues[1][1], e_initValues[1][2], ' dc3: ', e_initValues[2][0], e_initValues[2][1], e_initValues[2][2], ' dc4: ', e_initValues[3][0], e_initValues[3][1], e_initValues[3][2], ' dc5: ', e_initValues[4][0], e_initValues[4][1], e_initValues[4][2], ' e_showHide: ', e_showHide);
+	    }
+	    window.addEventListener('message', handleResponse, false);
+	    parent.postMessage('message', "*");
+	    
+	    function getGrade()
+	    {
+	    	givenAnswer = {d1x: e_curDummyPos[0][0],
+	      d1y: e_curDummyPos[0][1],
+	      d1c: e_curDummyPos[0][2],
+	      
+	      d2x: e_curDummyPos[1][0],
+	      d2y: e_curDummyPos[1][1],
+	      d2c: e_curDummyPos[1][2],
+	      
+	      d3x: e_curDummyPos[2][0],
+	      d3y: e_curDummyPos[2][1],
+	      d3c: e_curDummyPos[2][2],
+	      
+	      d4x: e_curDummyPos[3][0],
+	      d4y: e_curDummyPos[3][1],
+	      d4c: e_curDummyPos[3][2],
+	      
+	      d5x: e_curDummyPos[4][0],
+	      d5y: e_curDummyPos[4][1],
+	      d5c: e_curDummyPos[4][2],
+	      
+	      d6x: e_curDummyPos[5][0],
+	      d6y: e_curDummyPos[5][1],
+	      d6c: e_curDummyPos[5][2],
+	      
+	      d7x: e_curDummyPos[6][0],
+	      d7y: e_curDummyPos[6][1],
+	      d7c: e_curDummyPos[6][2],
+	      
+	      d8x: e_curDummyPos[7][0],
+	      d8y: e_curDummyPos[7][1],
+	      d8c: e_curDummyPos[7][2],
+	      
+	      d9x: e_curDummyPos[8][0],
+	      d9y: e_curDummyPos[8][1],
+	      d9c: e_curDummyPos[8][2],
+	      
+	      d10x: e_curDummyPos[9][0],
+	      d10y: e_curDummyPos[9][1],
+	      d10c: e_curDummyPos[9][2]};
+	      console.info("getGrade called. Given answer: ", JSON.stringify(givenAnswer));
+	      return JSON.stringify(givenAnswer);
+	    }
+	
+	    function getState() {
+	    givenAnswer = [e_curDummyPos[0][0],
+	      e_curDummyPos[0][1],
+	      e_curDummyPos[0][2],
+	      
+	      e_curDummyPos[1][0],
+	      e_curDummyPos[1][1],
+	      e_curDummyPos[1][2],
+	      
+	      e_curDummyPos[2][0],
+	      e_curDummyPos[2][1],
+	      e_curDummyPos[2][2],
+	      
+	      e_curDummyPos[3][0],
+	      e_curDummyPos[3][1],
+	      e_curDummyPos[3][2],
+	      
+	      e_curDummyPos[4][0],
+	      e_curDummyPos[4][1],
+	      e_curDummyPos[4][2],
+	      
+	      e_curDummyPos[5][0],
+	      e_curDummyPos[5][1],
+	      e_curDummyPos[5][2],
+	      
+	      e_curDummyPos[6][0],
+	      e_curDummyPos[6][1],
+	      e_curDummyPos[6][2],
+	      
+	      e_curDummyPos[7][0],
+	      e_curDummyPos[7][1],
+	      e_curDummyPos[7][2],
+	      
+	      e_curDummyPos[8][0],
+	      e_curDummyPos[8][1],
+	      e_curDummyPos[8][2],
+	      
+	      e_curDummyPos[9][0],
+	      e_curDummyPos[9][1],
+	      e_curDummyPos[9][2]];
+	    console.info("GetState called. Given answer: ", JSON.stringify(givenAnswer));
+	    return JSON.stringify(givenAnswer);
+	  }
+	  
+	  function setState()
+	  {
+	    console.info(" setState - begin");
+	    statestr = arguments.length === 1 ? arguments[0] : arguments[1];
+	    console.info(" setState - done");
+	  } 
+	  </script>
+    
+	</body>
+</html>
+

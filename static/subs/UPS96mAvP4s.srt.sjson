@@ -1,0 +1,35 @@
+{
+  "start": [
+    2040, 
+    4070, 
+    7920, 
+    12990, 
+    21660, 
+    23480, 
+    33050, 
+    36070, 
+    40980
+  ], 
+  "end": [
+    4070, 
+    7920, 
+    12990, 
+    17630, 
+    23480, 
+    33050, 
+    36070, 
+    40980, 
+    43550
+  ], 
+  "text": [
+    "WALTER LEWIN: I can massage this a little further because", 
+    "E is V divided by l.", 
+    "And so I can write now that the current is that sigma", 
+    "times A times V divided by l.", 
+    "I can write it down a little bit differently.", 
+    "I can say V therefore equals l divided by sigma A times I.", 
+    "And now we are staring at Ohm's Law, whether you like it", 
+    "or not, because this is what we call the", 
+    "resistance, capital R."
+  ]
+}

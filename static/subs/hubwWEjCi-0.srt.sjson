@@ -1,0 +1,47 @@
+{
+  "start": [
+    240, 
+    2310, 
+    6890, 
+    9380, 
+    13400, 
+    14310, 
+    19030, 
+    21550, 
+    24970, 
+    30080, 
+    38790, 
+    43970, 
+    50200
+  ], 
+  "end": [
+    2310, 
+    6890, 
+    9380, 
+    13400, 
+    14310, 
+    19030, 
+    21550, 
+    24970, 
+    30080, 
+    38790, 
+    43970, 
+    50200, 
+    54560
+  ], 
+  "text": [
+    "WALTER LEWIN: And of course, the differential equation is", 
+    "going to be exactly like this, except that V, now, is V 0", 
+    "times the cosine of omega t.", 
+    "And now I have to solve for this differential equation.", 
+    "That's the only difference.", 
+    "So I don't have to start from ground zero.", 
+    "And the solution to this differential equation is quite", 
+    "remarkable and not so intuitive.", 
+    "The current, as a function of time, now is V 0 divided by", 
+    "the square root of R squared plus omega L squared times the", 
+    "cosine of omega t minus phi.", 
+    "And the tangent of phi, that angle phi, is omega L divided", 
+    "by R. And of course, we need some time to digest this."
+  ]
+}

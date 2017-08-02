@@ -1,0 +1,74 @@
+<html>
+<span>
+
+<!--
+<h1>TEALSim Exploration: Ampere's Law</h1>
+<table>
+<tr><td vAlign="top">
+<p>
+A simulation illustrating Ampere's Law for a spherical or cylindrical imaginary Amperean open surface, in the presence of unit line currents either out of the page or into the page.</p>
+		<p>You begin with one line current out of the page and one line current into the page. You can add additional line currents using the Control Panel, or delete all line currents present and start again. 
+The line currents can be moved around by left clicking and dragging on the line current. You can select multiple line currents to move about by "ctrl left clicking" on successive line currents. 
+You can use the radio buttons on the Control Panel to choose whether your imaginary open Amperean surface is a cylinder or a sphere. You can move your Amperean surface around and by using the sliders in the Control Panel. 
+You will see tangents to the Amperean contour (gray arrows) at many points on the contour defining the open surface (see figure). At those same points you will see the local magnetic field on the contour due to all the line currents in the scene.
+</p>
+<p>If you left click and drag in the view, your perspective will change so that you can see the field vector and tangent orientation better. If you want to return to the original view hit the "Reset View" button in the Control Panel</p>
+</td>
+<td><center>
+<img src ="/static/html/gwt-teal/AmperesLaw/ampereanCircle.jpg"/><br/>
+<b>Amperean Circle with Tangents and Magnetic Fields</b>
+</center>
+</td></tr></table>
+<hr/>
+
+
+<p>(Please be patient - the simulation may take ~20 seconds to load)</p>
+
+-->
+<iframe id="teal-iframe" src="/static/html/gwt-teal/AmperesLaw.html?size=460&amp;graphw=300&amp;graphh=225" width="818" height="1150" scrolling="no" frameborder="1" />
+
+<script type="text/javascript">
+function toggleDisplay( id, hidetext, showtext )
+{
+  link = document.getElementById( id + "l" ).childNodes[0];
+
+  with( document.getElementById( id ).style )
+    {
+      if( display == "none" )
+	{
+	  display = "inline";
+	  link.nodeValue = hidetext;
+	}
+      else
+	{
+	  display = "none";
+	  link.nodeValue = showtext;
+	}
+    }
+}
+</script>
+
+ <p>More about this simulation: <a href="javascript:toggleDisplay('ht3','hide','show')" id="ht3l">show</a></p>
+		<div id="ht3" style="display:none">
+
+
+         	<p>This JavaScript simulation illustrates the field
+	 pattern created by two point charges with opposite signs of charge. In this simulation,
+	 the position and charge of each particle can be modified in real time, and the field
+	 configuration will update itself accordingly.
+
+	All three field visualization techniques can be applied to show the overall electric
+	field of the two-charge configuration: vector field, field lines, and "grass seeds".</p>
+
+<p>Click and drag using the left mouse button to rotate. Click and drag using the right mouse button (or use SHIFT + left mouse button) to change the center of view. And click and drag using the mouse wheel (or use CTRL + left mouse button) to zoom in/out. The two spheres can be selected and dragged.
+</p>
+
+<p></p>
+
+
+
+
+</div>
+
+</span>
+</html>

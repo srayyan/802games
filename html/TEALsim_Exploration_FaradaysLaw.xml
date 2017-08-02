@@ -1,0 +1,77 @@
+<html>
+<span>
+
+<h1>TEALSim Exploration: Faraday's Law</h1>
+
+ <p>
+We have a coaxial magnet and a ring which are both movable along their common axis. To move the magnet or
+ring, left click on and drag the one you want to move. The ring has a
+self-inductance and a resistance. You can change the magnetic dipole
+moment of the magnet and the resistance of the ring using the sliders
+below the view window. The top graph to the right shows the
+external magnetic flux through the ring (i.e. that due only to the magnet) versus time as a red line. The total magnetic flux (i.e. that due to current in the ring plus that due to the magnet) is shown as a blue line. The lower graph on the right
+shows the induced (eddy) current in the ring. The simulation is running when first opened (i.e. fluxes and currents versus time are being plotted). Hit "Pause" to stop the displays. They will restart automatically when you move the ring or magnet. Use "Reset Simulation" to get the time reset to 0.</p>
+
+<p>
+If
+you want to have the magnet move sinusoidally in and out of the ring
+automatically, click the "Motion on" button. To return to user
+control, click the button again. During the motion, you can use the "Pause" and "Resume" buttons to freeze a particular configuration. </p>
+
+<p>
+Left clicking and holding while moving the cursor anyplace other than on the ring or magnet will change the view orientation. Use the "Reset Camera" button to get back to the original view angle. </p>
+
+<p>
+You can increase or
+decrease the number of field lines shown using the bottom slider. At any point with motion halted (either automatic or manual), you can toggle between field lines and iron filings representations. Note that the iron filings view takes some time to calculate and render. 
+
+</p>
+
+<p>(Please be patient - the simulation may take ~20 seconds to load)</p>
+<iframe id="teal-iframe" src="/static/html/gwt-teal/FaradaysLaw2.html?size=460&amp;graphw=300&amp;graphh=225" width="818" height="975" scrolling="no" frameborder="1" />
+
+<script type="text/javascript">
+function toggleDisplay( id, hidetext, showtext )
+{
+  link = document.getElementById( id + "l" ).childNodes[0];
+
+  with( document.getElementById( id ).style )
+    {
+      if( display == "none" )
+	{
+	  display = "inline";
+	  link.nodeValue = hidetext;
+	}
+      else
+	{
+	  display = "none";
+	  link.nodeValue = showtext;
+	}
+    }
+}
+</script>
+<!--
+ <p>More about this simulation: <a href="javascript:toggleDisplay('ht3','hide','show')" id="ht3l">show</a></p>
+		<div id="ht3" style="display:none">
+
+
+         	<p>This JavaScript simulation illustrates the field
+	 pattern created by two point charges with opposite signs of charge. In this simulation,
+	 the position and charge of each particle can be modified in real time, and the field
+	 configuration will update itself accordingly.
+
+	All three field visualization techniques can be applied to show the overall electric
+	field of the two-charge configuration: vector field, field lines, and "grass seeds".</p>
+
+<p>Click and drag using the left mouse button to rotate. Click and drag using the right mouse button (or use SHIFT + left mouse button) to change the center of view. And click and drag using the mouse wheel (or use CTRL + left mouse button) to zoom in/out. The two spheres can be selected and dragged.
+</p>
+
+<p></p>
+
+
+
+
+</div>
+-->
+</span>
+</html>

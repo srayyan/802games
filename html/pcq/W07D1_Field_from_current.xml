@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Field from current">
+
+<!--Heading-->
+
+<p><b>Week 7 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/8/10">8.4</a>, <a href="/course/pdfbook/0/chapter/8/21">8.6.4</a>, <a href="/course/pdfbook/0/chapter/8/32">8.10.4</a>, <a href="/course/pdfbook/0/chapter/8/38">8.13</a>, <a href="/course/pdfbook/0/chapter/9/24">9.5</a>, <a href="/course/pdfbook/0/chapter/9/40">9.99</a></p>
+
+<h2>
+<center> Week 7 M/T Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here--> 
+
+<h2>
+  <p><center><b><a href="/course/pdfbook/0/chapter/9/3">Magnetic field around a current</a></b></center></p>
+  <p><center><b><a href="/course/pdfbook/0/chapter/9/3">(Linked to textbook Chapter 9.1)</a></b></center></p> 
+
+</h2> 
+
+  <p>Currents make magnetic field with field lines that are closed loops around the current. Close to the current the field lines are circles.You can see what &#x201C;close to" means by calculating [mathjaxinline]\vec{B}[/mathjaxinline] using the Biot-Savart Law (<a href="/course/pdfbook/0/chapter/9/3">(Reference: textbook equation Chapter 9 p3 equation (9.1.1))</a>)</p>
+  <p>[mathjax]d\vec{B} = \frac{\mu _0}{4 \pi } \frac{I \,  d\vec{s} \times (\vec{r}_{\rm f} - \vec{r}_{\rm s})}{\left|\vec{r}_{\rm f} - \vec{r}_{\rm s}\right|^3},[/mathjax]</p>
+
+  <p>
+ and then using the Taylor series to see what [mathjaxinline]\vec{B}[/mathjaxinline] looks 
+ like (i.e., to see its functional behavior) at points ever closer to the wire. </p>
+  <p>
+When you calculate with the Biot-Savart Law you are using the principle of superposition. 
+The Biot-Savart Law is a prescription for superposing the [mathjaxinline]d\vec{B}[/mathjaxinline] 
+contributions from all the different elements of current in a circuit. To find 
+[mathjaxinline]\vec{B}[/mathjaxinline] at a field location [mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline] 
+you superpose many elements of [mathjaxinline]d\vec{B}[/mathjaxinline] by integrating over 
+the source coordinates [mathjaxinline]\vec{r}_{\rm s}[/mathjaxinline]. That is why it is 
+important to distinguish clearly between a location [mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline] 
+in the field and the coordinates [mathjaxinline]\vec{r}_{\rm s}[/mathjaxinline] of the 
+sources that give rise to the field [mathjaxinline]\vec{B}[/mathjaxinline] at 
+[mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline]. That is why it is good to write the 
+Biot-Savart Law with [mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline] and 
+[mathjaxinline]\vec{r}_{\rm s}[/mathjaxinline] clearly distinguished. The coordinates 
+representing [mathjaxinline]\vec{r}_{\rm s}[/mathjaxinline] will be variables of integration; 
+the coordinates representing [mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline] will not. </p>
+<p><center><img src="/static/images/I_axis_B-1.png" width="600"/></center></p>
+<p><center>(a)</center></p>
+<table>
+  <tr>
+    <td style="border: 0"><img src="/static/images/I_axis_B-4.png" width="330"/></td>
+    <td style="border: 0"><img src="/static/images/I_axis_B-6.png" width="330"/></td>
+  </tr>
+  <tr>
+    <td style="border: 0"><center>(b)</center></td>
+    <td style="border: 0"><center>(c)</center></td>
+  </tr>
+</table>  
+
+  	<p>
+The general form of the Biot-Savart equation is powerful, but to do an integral you usually 
+want to set it up in a coordinate frame that reflects the symmetry of the problem and so 
+simplifies the form of the integrand. Three steps of this sort of simplification are shown 
+in the figure. Panel (a) shows a general set up. The vectors 
+[mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline] and [mathjaxinline]\vec{r}_{\rm s}[/mathjaxinline] 
+are not shown, but you can see that [mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline] would go 
+from the origin to a point on the small loop surrounding the current, and 
+[mathjaxinline]\vec{r}_{\rm s}[/mathjaxinline] would go from the origin to the midpoint of 
+the path length element [mathjaxinline]d\vec{s}[/mathjaxinline]. 
+	</p>
+  <p>
+In panel (b) the axes have been moved and oriented to correspond to the symmetry of the setup. Here there is cylindrical symmetry if we are close to the wire. Panel (b) shows the [mathjaxinline]x[/mathjaxinline]-axis coincident with the wire and the origin at the mid point of the segment of the circuit wire that we are considering. The new alignment of the axes is shown in the lower right hand corner of panel (b) which shows an enlarged view of the wire as it would appear to an observer close to it; the circles areound the wire are some field lines. </p>
+  <p>
+Panel (c) shows the vectors of the general form of the Biot-Savart Law represented in the chosen coordinate frame. </p>
+  <p>
+This three-step strategy is good to keep in mind: (1) Decide to use superposition, i.e., 
+decide to use Biot-Savart's law (you will learn about an alternative next week); 
+(2) identify the symmetries of the setup, and choose and orient your coordinate system to 
+reflect them ; (3) express the Biot-Savart law in terms of those coordinates. Integrate. </p>
+  <p>
+In the reoriented reference frame [mathjaxinline]\vec{r}_{\rm s} = x_{\rm s} \hat{\imath }[/mathjaxinline]. 
+Let's choose to find [mathjaxinline]\vec{B}[/mathjaxinline] at positions on the [mathjaxinline]z[/mathjaxinline]-axis; 
+then the field coordinate is [mathjaxinline]\vec{r}_{\rm f} =z_{\rm f} \hat{k}[/mathjaxinline], and </p>
+  <p>[mathjax]d\vec{B} = \frac{\mu _0}{4 \pi } \frac{I dx_ s \hat{\imath } \times (z_{\rm f} \hat{k} - {x}_{\rm s}\hat{\imath })}{\left(\sqrt {z_{\rm f}^2+x_{\rm s}^2}\, \, \right)^{\! 3}} = -\frac{\mu _0}{4 \pi } I \frac{z_{\rm f} dx_ s}{\left(\sqrt {z_{\rm f}^2+x_{\rm s}^2}\, \, \right)^{\! 3}} \, \, \hat{\jmath }.[/mathjax]</p>
+  <p>
+ Taking the length of the wire to be [mathjaxinline]2a[/mathjaxinline] so that the integration 
+ is from [mathjaxinline]x_{\rm s}=-a[/mathjaxinline] to [mathjaxinline]x_{\rm s} =a[/mathjaxinline] 
+ and using the substitution [mathjaxinline]x_{\rm s} = z_{\rm f} \tan \theta[/mathjaxinline], we get </p>
+  <p>[mathjax]\vec{B} =-\frac{\mu _0 I}{4 \pi z_{\rm f}} \int _{-a}^{a} \! \! \!
+        \cos \theta \,  d\theta \, \, \hat{\jmath } = -\frac{\mu _0 I}{2 \pi z_{\rm f}} \frac{a}{\sqrt {a^2+z_{\rm f}^2} }\;  
+        \hat{\jmath }.[/mathjax]</p>
+</html>

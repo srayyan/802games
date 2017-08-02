@@ -1,0 +1,14 @@
+
+<html display_name="Conducting Spherical Shell Carrying Charge, with a Point Charge at the Center">
+
+<p>
+A conducting spherical shell has an inner radius [mathjaxinline]a[/mathjaxinline] and an outer radius [mathjaxinline]b[/mathjaxinline]. We place a positive point charge [mathjaxinline]+Q[/mathjaxinline] at its center. We also place a total charge of [mathjaxinline]-3Q[/mathjaxinline] on the thick shell. Find the electric field everywhere. What is the charge on the inner surface of the shell? What is the charge on the outer surface? Determine the electric potential everywhere in space, assuming that the potential is zero at infinity. <b> Note that we have not covered electric potential yet, but the first part of the problem is helpful for this week's homework.</b> </p>
+
+<p> Clarification: About 30 second into the solution, Prof. Lewin refers to the charge [mathjaxinline]-3Q[/mathjaxinline] as being "at the outer surface". It is more accurate to say that this is the total charge on the shell. This is discussed in more detail about 6 minutes into the solution when the second and third questions are covered.</p>
+
+<p><b>Note</b> that in this solution, Prof. Lewin used the notation "ds" for a small surface element instead of the more typical "dA". Except for this unusal notation, all the discussion of Gauss' Law is identical to what that you will see elsewhere. </p>
+
+<p> Also, see <a href="https://www.edx.org/courses/MITx/8.02x/2013_Spring/discussion/forum/802x_L2V5/threads/5123aed0c8bcca1f00000034">this post</a> for a correction of the graph Prof. Lewin draws about 5 minutes into this video.</p>
+
+
+</html>

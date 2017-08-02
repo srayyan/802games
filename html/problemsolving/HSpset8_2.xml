@@ -1,0 +1,9 @@
+
+<html display_name="Driven RLC Circuits">
+ 
+    <p>
+A circuit consists of a generator with frequency [mathjaxinline]\omega[/mathjaxinline], a resistor with resistance [mathjaxinline]R[/mathjaxinline], a capacitor with capacitance [mathjaxinline]C[/mathjaxinline], and an inductor with an inductance [mathjaxinline]L[/mathjaxinline]. Why does the circuit end up oscillating at the frequency of the driving electromotive force? Give an expression for the amplitude of the driven current in the circuit. Plot this current as a function of our driving frequency [mathjaxinline]\omega[/mathjaxinline]. At what frequency does it maximize, and what is the maximum current? How does the shape of this curve depend on the resistance in the circuit? What is the phase difference between the current and the driving electromotive force? In what frequency regime does the capacitor play the primary role, and in what frequency range does the inductor play the primary role? </p>
+<p>
+Note that at about 3 minutes (speed 1.0) Prof. Lewin incorrectly writes  [mathjaxinline]\omega_0^2[/mathjaxinline]. It should be [mathjaxinline]\frac{1}{LC}[/mathjaxinline]. In the following discussion, [mathjaxinline]\omega_0[/mathjaxinline] is written correctly.
+</p>
+</html>

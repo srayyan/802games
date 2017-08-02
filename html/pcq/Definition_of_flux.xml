@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Week 2 W/Th Pre-class Reading Summary">
+<text>
+
+<p>
+<b>Week 2 W/Th Reading Assignment:</b>
+</p>
+<p>
+From the book <a href="/course/pdfbook/0/chapter/3/2">3.1-3.2</a>, <a href="/course/pdfbook/0/chapter/3/22">3.6-3.7</a>, <a href="/course/pdfbook/0/chapter/3/29">3.10</a>
+</p>
+
+<h2>
+<center> Week 2 W/Th Pre-class Reading Summary </center>
+</h2>
+
+<p>The surface integral of a vector field over an area is called 'flux'. This surface integral is important because it provides a useful 
+connection between the distribution of field intensity over a closed surface and the charge inside that surface. 
+The word &#x2018;flux' was first used in studies of velocity fields where there was an actual flow of matter 
+across a surface. In electrostatics nothing is flowing, but electric flux is still the name used for this 
+surface integral. This integral is often written as [mathjaxinline]\int \! \! \! \int _{\rm S} \vec{E} 
+\cdot d\vec{A}[/mathjaxinline]; it is also written as [mathjaxinline]\int _{\rm S} \vec{E} 
+\cdot d\vec{A}.[/mathjaxinline] A circle on the integral sign, [mathjaxinline]\oint _{\rm S} \vec{E} \cdot 
+d\vec{A}[/mathjaxinline], means that the surface integration is over a closed surface. 
+</p>
+
+
+</text>
+</html>

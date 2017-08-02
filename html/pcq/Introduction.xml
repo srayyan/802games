@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Introduction">
+
+ <!--Heading-->
+
+<p><b>Week 6 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/6/2">6.1-6.3</a>, <a href="/course/pdfbook/0/chapter/8/3">8.1-8.3</a>, <a href="/course/pdfbook/0/chapter/8/16">8.5</a></p>
+
+<h2>
+<center> Week 6 M/T Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here--> 
+  
+
+<h2>
+  <p><center><b><a href="/course/pdfbook/0/chapter/6/5">Ohm's Law [mathjaxinline]V=IR[/mathjaxinline]</a></b></center></p>
+  <p><center><b><a href="/course/pdfbook/0/chapter/6/5">(Linked to textbook Chapter 6.2)</a></b></center></p> 
+
+</h2>
+
+  <h2> </h2>
+  <p>
+In some substances, e.g. metals, charges move relatively freely. Because a wire of such a 
+substance, e.g., copper, conducts charge from one place to another, we call these substances
+ &#x201C;conductors." </p>
+  <p>
+In most conductors under normal circumstances the movement of the charge is impeded. 
+There is, we say, "resistance" to the movement. </p>
+
+  <p><h4>Electric current - amperes: [mathjaxinline]I[/mathjaxinline]</h4> The first ideas
+   of moving charge were about charge moving in a tube of conducting material, i.e., a wire.
+   Physicists described this behavior by analogy to the flow of water through a pipe, so
+   they viewed conduction as a stream of charge, an &#x201C;electric current," moving in
+   a wire. Electric current is the rate at which charge passes along the wire. To make
+   the idea clear we imagine a surface intersecting the wire and say the electric current
+   [mathjaxinline]I[/mathjaxinline] in the wire is the amount of charge 
+   [mathjaxinline]\Delta Q[/mathjaxinline] that passes through that surface per time 
+   interval [mathjaxinline]\Delta t[/mathjaxinline] <a href="/course/pdfbook/0/chapter/6/2">(Reference: textbook equation Chapter 6 p2 equation (6.1.1))</a>: 
+  </p>
+  <p>[mathjax]I = \frac{\Delta Q}{\Delta t} \mbox{ or by the usual limiting process }
+       I = \frac{dQ}{dt}.[/mathjax]</p>
+  <p>
+In the SI electric current is measured in coulomb/second (C/s), and this combination of units
+ is called an ampere, abbreviated A. </p>
+
+  <p><h4>Circuits</h4> Electric current will not flow along a wire unless there is a place
+   for it to go. For steady currents, the kind we are talking about here, there has to be 
+   a source and a sink of charge. A battery is both. Electric current was defined to be the
+    flow of positive charge, so current is always said to flow from the + terminal of a 
+    battery or power supply to the - terminal. We know now that in metals it is the 
+    negatively charged electrons that move from the - terminal to the + terminal, but we 
+    continue to use the convention: current flows from + to -. </p>
+  
+  <p>
+Current flows in a loop from + to -. The loop or collection of loops - they can be 
+complicated - is called a circuit. Sometimes only part of the loop is drawn. For example, 
+the + terminal may be far from the - terminal so the diagram does not look like a loop. Or 
+sometimes the sink is drawn as the symbol for &#x201C;ground". But there is always a 
+circuit, i.e. some sort of closed loop, around which the current flows. No circuit; no current. 
+</p>
+
+ <p>
+Because charge is conserved, the sum of currents coming into a junction of wires must equal
+ the sum of currents going out. This is called Kirchhoff's current law. 
+ </p>
+ 
+  <p><h4>Potential difference: [mathjaxinline]V[/mathjaxinline]</h4> 
+  Under most circumstances electric current does not flow unless something pushes it. 
+  There has to be an electric field. This field is created by applying a potential difference 
+  to the circuit. That is what a battery or power supply does; it applies a potential 
+  difference between the + and - terminals. Usually we denote this potential difference by 
+  [mathjaxinline]V[/mathjaxinline]. 
+  </p>
+
+  <p>
+(There is a remarkable exception to this behavior. At sufficiently cold temperatures 
+materials called superconductors lose all resistance - it really becomes zero - and once 
+begun, current will flow indefinitely around a closed loop without the application of a 
+voltage.) 
+  </p>
+<p><a href="/course/pdfbook/0/chapter/6/5">(Reference: textbook equation Chapter 6 p5 equation (6.2.3))</a></p>
+
+
+  <p><h4>Resistance: [mathjaxinline]R[/mathjaxinline]</h4> An electric field is needed to 
+  make an electric current. The alert reader will ask: Won't an electric field accelerate 
+  charges to ever greater speeds? It will unless there is some impediment to the movement 
+  of the charges. DBL shows you a microscopic model of how the interaction of moving 
+  charges with atoms of the conductor offsets acceleration by the applied electric field
+   with the result that on average the electric field produces steady motion rather than 
+   accelerated motion of the charges in an electric current. 
+   </p>
+  <p>
+The Bavarian physicist Georg Ohm showed that for many conductors the current 
+[mathjaxinline]I[/mathjaxinline] is proportional to the applied voltage 
+[mathjaxinline]V[/mathjaxinline]. We call the constant of proportionality the 
+&#x201C;resistance" of the wire and denote it as [mathjaxinline]R[/mathjaxinline]. The 
+relationship is purely empirical but extremely useful. It is called &#x201C;Ohm's Law" and
+ is written: </p>
+  <p>[mathjax]V = I R [/mathjax]</p>
+  <p>
+From the equation you can see that the SI units of 
+[mathjaxinline]R[/mathjaxinline] are volts/ampere. This group of units is called an 
+&#x201C;ohm" and is abbreviated by [mathjaxinline]\Omega[/mathjaxinline] the capital Greek 
+letter omega. 
+  </p>
+  <p>
+Electrical resistance is present in most materials. For example, it is distributed along a 
+wire - the longer the wire the more resistance. But for many purposes it is useful to have 
+localized lumps of well-defined resistance. These are called &#x201C;resistors" and they 
+are manufactured and widely used in electronics. Americans represent resistors by the symbol
+&#160;&#160; 
+<img src="/static/images/Ameristor.png" width="60"/>.</p>
+
+<p><a href="/course/pdfbook/0/chapter/6/6">(Reference: textbook equation Chapter 6 p6 equation (6.2.6))</a></p>
+
+</html>

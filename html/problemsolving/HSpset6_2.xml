@@ -1,0 +1,7 @@
+
+<html display_name="The Inductance of Two Coaxial Soleniods">
+ 
+    <p>
+Two solenoids are arranged one inside the other and co-axial (they both have the same axis). They each have [mathjaxinline]N[/mathjaxinline] windings and the same length [mathjaxinline]l[/mathjaxinline], but one has a radius [mathjaxinline]a[/mathjaxinline] and the other has radius [mathjaxinline]b[/mathjaxinline]. They are in series, so that they both carry the same current, but the windings are in opposite directions so that the magnetic field from one is in the opposite direction from the magnetic field of the other. What is the magnetic field everywhere? What is the self-inductance of this combination? </p>
+ 
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<html display_name="Field from current">
+
+
+<!--Heading-->
+
+<p><b>Week 6 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/8/28">8.9</a>, <a href="/course/pdfbook/0/chapter/8/28">8.10</a>, <a href="/course/pdfbook/0/chapter9/47">9.10.1</a>, <a href="/course/pdfbook/0/chapter9/51">9.11.1-3</a>, <a href="/course/pdfbook/0/chapter9/61">9.11.7-8</a></p>
+
+<h2>
+<center> Week 6 F Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here--> 
+
+<h2>
+  <p><center><b><a href="/course/pdfbook/0/chapter/9/3">Magnetic field around a current</a></b></center></p>
+  <p><center><b><a href="/course/pdfbook/0/chapter/9/3">(Linked to textbook Chapter 9.1)</a></b></center></p> 
+
+</h2> 
+
+
+
+  <p>Currents make magnetic field. For example, a current [mathjaxinline]I[/mathjaxinline] traveling along a straight wire makes a magnetic field with field lines that are closed loops around the wire. Close to the wire the field lines are circles as shown in the figure (adapted from a class slide). </p>
+  <center>
+    <img src="/static/images/B_of_current_RHR.png" width="530"/>
+  </center>
+  <p>
+&#x201C;Close to" means that effects from other parts of the circuit - and there must always be other parts because there must always be a circuit for a current to flow - are far enough away to be neglected, and so we can treat the wire as though it were straight and infinitely long. When this is a good approximation </p>
+  <p>[mathjax]\left| \vec{B} \right| = \frac{\mu _0 I}{2\pi r}.[/mathjax]</p>
+
+<p><a href="/course/pdfbook/0/chapter/9/6">(Reference: textbook equation Chapter 9 p6 equation (9.1.7))</a></p>
+
+  <p>
+You can find the direction of [mathjaxinline]\vec{B}[/mathjaxinline] with a small compass needle; it will line up with the magnetic field lines. By convention we take the direction of [mathjaxinline]\vec{B}[/mathjaxinline] to be the direction of the north pole of the compass needle. Experimentally you observe that the direction of [mathjaxinline]\vec{B}[/mathjaxinline] is perpendicular to the direction of the current and to the direction of the vector from the wire to the field point. This double perpendicularity makes the vector cross product a good way to describe the direction of [mathjaxinline]\vec{B}[/mathjaxinline]. </p>
+  <p>
+You can see how this works for circular field lines: let [mathjaxinline]\hat{n}[/mathjaxinline] be the direction of the current [mathjaxinline]I[/mathjaxinline] and [mathjaxinline]\hat{r}_{\rm f}[/mathjaxinline] be a unit vector pointing from the wire to the field point [mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline]. Then because [mathjaxinline]\vec{B}[/mathjaxinline] is perpendicular to both these unit vectors, its direction will be either [mathjaxinline]+[/mathjaxinline] or [mathjaxinline]-\hat{n} \times \hat{r}_{\rm f}[/mathjaxinline]. To make the answer come out in the direction that the north pole of a compass needle points we have to choose [mathjaxinline]+[/mathjaxinline]. Then </p>
+  <p>[mathjax]\vec{B} =\frac{\mu _0}{2 \pi } \frac{I \, (\hat{n} \times \hat{r}_{\rm f})}{|\vec{r}_{\rm f}|}[/mathjax]</p>
+  <p>
+If you imagine gripping a wire with your right hand with your thumb pointing in the direction of the current, then [mathjaxinline]\vec{B}[/mathjaxinline] has the same direction around the wire as the curl of your fingers. (See the figure.) This right-hand rule is a short-cut that saves you having to figure out the cross product. </p>
+  <p>
+You can tell if a magnetic field is present by studying its effect on moving charges. These charges can be moving in a conductor as an electric current, or they can be moving freely in space. In either case you can use </p>
+  <p>[mathjax]\vec{F} = q(\vec{v} \times \vec{B})[/mathjax]</p>
+  <p>
+ to predict what will happen. </p>
+  <p>
+You can modify this equation to express the charges [mathjaxinline]q[/mathjaxinline] and their drift velocity [mathjaxinline]\vec{v}[/mathjaxinline] as an electric current [mathjaxinline]I[/mathjaxinline] flowing in some element [mathjaxinline]d\vec{s}[/mathjaxinline] of its path [mathjaxinline]s[/mathjaxinline] along a wire. For a long straight wire of length and direction [mathjaxinline]\vec{L}[/mathjaxinline] the above equation becomes </p>
+  <p>[mathjax]\vec{F} = I \vec{L} \times \vec{B}.[/mathjax]</p>
+  <p>
+ This formulation has its uses, but there is no new physics in it; it is equivalent to [mathjaxinline]q(\vec{v}\times \vec{B})[/mathjaxinline]. </p>
+  <p>
+Important here is the assignment of vector status to elements of the path along which the charges are moving. Making [mathjaxinline]\vec{L}[/mathjaxinline] a vector allows you to use the vector cross product to describe the angular dependence of the magnetic force efficiently. </p>
+  <p>
+But what if the wire is not a nice straight line as is assumed when we use [mathjaxinline]\vec{L}[/mathjaxinline]? What if the wire curves this way and that? To handle such situations we imagine the path [mathjaxinline]s[/mathjaxinline] as broken up into tiny segments [mathjaxinline]d\vec{s}[/mathjaxinline]. Each of these is short enough to have a definite direction and be a vector. Then you can write that the element of force [mathjaxinline]d\vec{F}[/mathjaxinline] acting on each [mathjaxinline]d\vec{s}[/mathjaxinline] is </p>
+  <p>[mathjax]d\vec{F} = I d\vec{s} \times \vec{B} .[/mathjax]</p>
+  <p>
+ The total force is found by summing these elements; in the limit of very small [mathjaxinline]d\vec{s}[/mathjaxinline] the sum becomes what we call a path integral and </p>
+  <p>[mathjax]\vec{F} = I \int _ a^ b d\vec{s} \times \vec{B}.[/mathjax]</p>
+  <p>
+ This path integral adds up all the little differential cross products along the path that is the wire as it lies curved and bent between points a and b; the result is the overall vector answer, the total force [mathjaxinline]\vec{F}[/mathjaxinline] acting on that part of the wire connecting points a and b. </p>
+  <p>
+In a similar way we can write an expression for the magnetic field a perpendicular distance [mathjaxinline]r[/mathjaxinline] outside a long straight wire carrying a current [mathjaxinline]I[/mathjaxinline]. It is </p>
+  <p>[mathjax]\vec{B} = \frac{\mu _0 I}{2 \pi r}[/mathjax]</p>
+  <p><a href="/course/pdfbook/0/chapter/9/6">(Reference: textbook equation Chapter 9 p6 equation (9.1.7))</a></p>
+  <p>
+ or we can follow Biot-Savart and find [mathjaxinline]\vec{B}[/mathjaxinline] from the equation </p>
+  <p>[mathjax]d\vec{B} = \frac{\mu _0}{4 \pi } \frac{I \,  d\vec{s} \times (\vec{r}_{\rm f} - \vec{r}_{\rm s})}{\left|\vec{r}_{\rm f} - \vec{r}_{\rm s}\right|^3}.[/mathjax]</p>
+
+<p><a href="/course/pdfbook/0/chapter/9/8">(Reference: textbook equation Chapter 9 p8 equation (9.1.11))</a></p>
+
+  <p>
+You can see that the Biot-Savart equation allows you to find the [mathjaxinline]\vec{B}[/mathjaxinline] field by superposing the contributions from elements of current similar to the way we used the Coulomb electric field equation to find the [mathjaxinline]\vec{E}[/mathjaxinline] field by superposing the contributions from elements of charge. Notice that the distinction between field coordinates [mathjaxinline]\vec{r}_{\rm f}[/mathjaxinline] and source coordinates remains important even though it is common to write the Biot-Savart law in a way that obscures the distinction. </p>
+  <p>
+For any distribution of currents, the Biot-Savart law will give you the magnetic field at any point in space that you choose. This is a general result and tells you that in principle the Biot-Savart equation is powerful. The integrals, however, usually cannot be calculated in any closed form so fields are calculated by numerical integration and by approximations based on cases where a high degree of symmetry makes it possible to do the integrations. </p>
+</html>

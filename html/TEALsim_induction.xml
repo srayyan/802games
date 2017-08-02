@@ -1,0 +1,64 @@
+<html>
+<span>
+
+<h1>TEALSim Exploration: Charge by Induction</h1>
+
+<p>
+We have an equal number of positive (orange) and negative (blue)
+charges distributed between two cylindrical barriers which they cannot
+cross.  We can control the amount of charge on a central charge which
+is interior to the innermost of the two cylinders.  In the image
+shown, the  central charge is neutral (silver) but with the slider we
+can make it positive (orange) or negative (blue).  
+</p>	
+	<p>Click and drag using the left mouse button to rotate. Click and drag using the right mouse button (or use SHIFT + left mouse button) to change the center of view. And click and drag using the mouse wheel (or use CTRL + left mouse button) to zoom in/out.</p>
+
+
+<p>(Please be patient - the simulation may take ~20 seconds to load)</p>
+<iframe id="teal-iframe" src="/static/html/gwt-teal/ChargeByInduction2.html?size=460&amp;graphw=300&amp;graphh=225" width="818" height="530" scrolling="no" frameborder="1" />
+
+<script type="text/javascript">
+function toggleDisplay( id, hidetext, showtext )
+{
+  link = document.getElementById( id + "l" ).childNodes[0];
+
+  with( document.getElementById( id ).style )
+    {
+      if( display == "none" )
+	{
+	  display = "inline";
+	  link.nodeValue = hidetext;
+	}
+      else
+	{
+	  display = "none";
+	  link.nodeValue = showtext;
+	}
+    }
+}
+</script>
+<!--
+ <p>More about this simulation: <a href="javascript:toggleDisplay('ht3','hide','show')" id="ht3l">show</a></p>
+		<div id="ht3" style="display:none">
+
+
+         	<p>This JavaScript simulation illustrates the field
+	 pattern created by two point charges with opposite signs of charge. In this simulation,
+	 the position and charge of each particle can be modified in real time, and the field
+	 configuration will update itself accordingly.
+
+	All three field visualization techniques can be applied to show the overall electric
+	field of the two-charge configuration: vector field, field lines, and "grass seeds".</p>
+
+<p>Click and drag using the left mouse button to rotate. Click and drag using the right mouse button (or use SHIFT + left mouse button) to change the center of view. And click and drag using the mouse wheel (or use CTRL + left mouse button) to zoom in/out. The two spheres can be selected and dragged.
+</p>
+
+<p></p>
+
+
+
+
+</div>
+-->
+</span>
+</html>

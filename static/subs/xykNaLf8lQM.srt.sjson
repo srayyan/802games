@@ -1,0 +1,47 @@
+{
+  "start": [
+    270, 
+    5470, 
+    6970, 
+    9720, 
+    11980, 
+    15230, 
+    19890, 
+    24860, 
+    28160, 
+    31580, 
+    36090, 
+    39940, 
+    44950
+  ], 
+  "end": [
+    5470, 
+    6970, 
+    9720, 
+    11980, 
+    15230, 
+    19890, 
+    24860, 
+    28160, 
+    31580, 
+    36090, 
+    39940, 
+    44950, 
+    48840
+  ], 
+  "text": [
+    "WALTER LEWIN: This is newtons, q is coulomb, and v is meters", 
+    "per second.", 
+    "So this would be the unit for magnetic field strength, but", 
+    "no one would ever say that.", 
+    "In SI units-- this would be SI units--", 
+    "we call that one tesla, for which we write one capital T.", 
+    "The tesla is an extremely strong magnetic field.", 
+    "The magnetic field of this magnet is only 2/10 of a", 
+    "tesla, and that's a very strong magnet.", 
+    "We often use, therefore, a unit which is the gauss, which", 
+    "is not an SI unit, but you'll see it often in books.", 
+    "And 1 gauss is 10 to the minus 4 tesla.", 
+    "The Earth's magnetic field is roughly half a gauss."
+  ]
+}

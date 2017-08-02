@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+C:\Users\zelle\mitx-vagrant\data\802r-TTh\static\.metadata\.plugins\org.eclipse.jdt.core
+24826434.index
+748787775.index
+3134131260.index
+1101532756.index
+3941795680.index
+4038879397.index
+3668022846.index

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+
+
+<html>
+<p>
+<!--<img src="/static/images/icons/textbook_icon.png"/> More information given in <a href="/course/pdfbook/0/chapter/${chapter}/${page}">the text</a>.-->
+<img src="/static/images/icons/textbook_icon.png"/> Suggested reading from the textbook to accompany lecture 18: <a href="/course/pdfbook/0/chapter/10/18">Chapter 10, sections 10.5-10.6</a> and <a href="/course/pdfbook/0/chapter/10/3">Chapter 13, section 13.1</a> 
+</p>
+
+
+</html>
+
+

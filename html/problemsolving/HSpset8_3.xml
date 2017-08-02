@@ -1,0 +1,10 @@
+
+<html display_name="A Driven RLC Circuit">
+
+    <p>
+A driven RLC circuit has a resistance of [mathjaxinline]300[/mathjaxinline] Ohms, an inductance of [mathjaxinline]0.25[/mathjaxinline] Henries, and a capacitance of [mathjaxinline]8 \times 10^{-6}[/mathjaxinline] Farads. It is driven by a [mathjaxinline]120[/mathjaxinline] V power supply at an angular frequency [mathjaxinline]\omega =400[/mathjaxinline] radians/sec. Find the current in the circuit, the voltage you would read when you put voltmeters across the resistor, the capacitor, and the inductor, and the lead or lag of the current with respect to the driving voltage. Make sure you specify whether the current leads or lags the voltage. Is this circuit dominated by the capacitor or the inductor, or neither one? </p>
+
+<p>
+Note that at about 1:20 (speed 1.0), Prof. Lewin omits to square the term [mathjaxinline](\omega L - 1/(\omega C))[/mathjaxinline] inside the square root. The calculation was done correctly so the answer in ohms is correct.</p>
+
+</html>

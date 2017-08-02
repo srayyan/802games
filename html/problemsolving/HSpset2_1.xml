@@ -1,0 +1,24 @@
+
+<html display_name="Electron Moving in an Electric Field">
+    
+    <p>
+An electron is shot at [mathjaxinline]t = 0[/mathjaxinline] with a speed of [mathjaxinline]v = 2.5\times 10^6[/mathjaxinline] meters/second into a homogeneous [mathjaxinline]\vec E[/mathjaxinline] field of [mathjaxinline]10^3[/mathjaxinline] Newtons/Coulomb. The field is along the same axis as the velocity and points in the direction that causes the electron to slow down. </p>
+    <ul class="itemize">
+      <li>
+        <p>
+Make a sketch showing the relative directions of [mathjaxinline]\vec E[/mathjaxinline] and [mathjaxinline]\vec v[/mathjaxinline]. </p>
+      </li>
+      <li>
+        <p>
+How far in its initial direction will the electron travel before it comes to a stop? </p>
+      </li>
+      <li>
+        <p>
+How long a time will it take for the electron to return to its original position? </p>
+      </li>
+      <li>
+        <p>
+Suppose now that the [mathjaxinline]\vec E[/mathjaxinline] field ends after only [mathjaxinline]10[/mathjaxinline] millimeters. What fraction of the electron's kinetic energy was lost in passing through the field? </p>
+      </li>
+    </ul>
+</html>

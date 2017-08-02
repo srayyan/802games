@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<html source_file="/Users/chholbrow/MOOCs/edX_maker/LaTeX2edX/toyx.tex" display_name="Week 5 W/TR Pre-class Reading Summary">
+
+
+
+ <!--Heading-->
+
+<p><b>Week 5 Reading Assignment:</b></p>
+<p>From the book <a href="/course/pdfbook/0/chapter/5/12">5.4</a>, <a href="/course/pdfbook/0/chapter/5/25">5.6</a>, <a href="/course/pdfbook/0/chapter/5/29">5.8-5.9</a></p>
+
+<h2>
+<center> Week 5 W/TR Pre-class Reading Summary </center>
+</h2>
+<p>
+The following is a summary of the reading from the textbook to give you an idea of what is expected to know before coming to class. It does not replace reading the textbook.
+</p>
+<br/>
+
+<!--Heading Ends Here--> 
+
+<h2>
+  <p><center><b><a href="/course/pdfbook/0/chapter/5/12">Capacitors store energy</a></b></center></p>
+  <p><center><b><a href="/course/pdfbook/0/chapter/5/12">(Linked to textbook Chapter 5.4)</a></b></center></p> 
+
+</h2>
+ 
+ <h2> Dielectrics and dielectric constant </h2>
+  <p>
+Dielectric materials are insulators. Unlike metals they do not have free charges to move 
+and conduct electricity when an electric field is applied. Instead of free charges, 
+dielectrics have (or form) electric dipoles that do not move around much, but which are 
+able to rotate and line up with an applied electric field. It is by these dipoles that 
+dielectrics and electric fields interact. 
+</p>
+  <p>
+There are solids that have built-in dipole moments and permanent electric fields. By 
+analogy to magnets, these substances are called electrets. Quartz is a naturally occurring
+ electret. Many electrets are manufactured from synthetic polymers. Teflon is an example. 
+ </p>
+  <p>
+Most dielelctric materials are not electrets; they do not contain intrinsic dipole 
+moments. However, applying an electric field to a dielectric will cause dipoles to form 
+in it. We say that the electric field &#x201C;polarizes" the dielectric. An electric field
+ exerts forces on a dielectric by interacting with its dipoles whether they are intrinsic 
+ or induced. 
+ </p>
+  <p>
+Dipoles in a dielectric have their own electric fields, and when aligned by an external 
+field, these have a non-zero component in the direction opposite to that of the external 
+field; they reduce field intensity in the space near them. This property of dielectrics is
+ used to increase the capacitance of capacitors. 
+ </p>
+  <p>
+For many substances in electric fields that are not too large, the amount of dipole moment
+ per unit volume is proportional to the applied electric field 
+ [mathjaxinline]\vec{E}[/mathjaxinline]. We call the amount of dipole moment in a unit 
+ volume the polarization [mathjaxinline]\vec{P}[/mathjaxinline] of the sample and write <a href="/course/pdfbook/0/chapter/5/17">(Reference: textbook equation Chapter 5 p17 equation (5.4.9))</a>
+ </p>
+  <p>[mathjax]\vec{P}=\varepsilon _0 \chi _{\rm e} \vec{E}[/mathjax]</p>
+  <p>
+ DBL shows you that a polarization [mathjaxinline]\vec{P}[/mathjaxinline] of a slab 
+ results in a surface charge density [mathjaxinline]\sigma _ p = P[/mathjaxinline] and an 
+ accompanying electric field of [mathjaxinline]-\vec{P}/\varepsilon _0[/mathjaxinline]. 
+ The result is that the effective electric field in the dielectric is reduced by this 
+ factor [mathjaxinline]\kappa _{\rm e} = 1+\chi _{\rm e}[/mathjaxinline] and the 
+ capacitance increases by a factor [mathjaxinline]\kappa _{\rm e}[/mathjaxinline]. For a 
+ parallel plate capacitor this result means <a href="/course/pdfbook/0/chapter/5/20">(Reference: textbook equation Chapter 5 p20 equation (5.4.19))</a>
+ </p>
+  <p>[mathjax]C = \kappa _{\rm e} \varepsilon _0 \frac{A}{d}[/mathjax]</p>
+  <p>
+ where [mathjaxinline]A[/mathjaxinline] is the area of a plate and 
+ [mathjaxinline]d[/mathjaxinline] is the distance between the plates. 
+ </p>
+</html>

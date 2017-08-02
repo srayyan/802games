@@ -1,0 +1,38 @@
+{
+  "start": [
+    860, 
+    2840, 
+    9480, 
+    11000, 
+    12060, 
+    15410, 
+    19520, 
+    26060, 
+    28210, 
+    29800
+  ], 
+  "end": [
+    2840, 
+    9480, 
+    11000, 
+    12060, 
+    15410, 
+    19520, 
+    26060, 
+    28210, 
+    29800, 
+    31220
+  ], 
+  "text": [
+    "WALTER LEWIN: And I found that the resistance then, putting", 
+    "in the numbers, is about 10 billion ohm.", 
+    "But you will say, wow.", 
+    "Oh, it's 4 actually.", 
+    "Well, big deal, 4 billion ohm.", 
+    "So you will say that's enormous resistance.", 
+    "Well first of all, I'm walking on two feet, not on one.", 
+    "So if I would be standing one the whole lecture, it would", 
+    "probably be four billion.", 
+    "But if I have two feets on the ground."
+  ]
+}

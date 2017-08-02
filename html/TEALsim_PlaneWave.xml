@@ -1,0 +1,73 @@
+<html>
+<span>
+
+<h1>TEALSim Exploration: Plane Wave</h1>
+
+ <p>
+The EM Radiator is a simulation of how to generate plane electromagnetic  
+			waves by shaking a sheet of positive electric charge (the pink sheet).
+			When the &quot;Motion On&quot; box is CHECKED,
+			the sheet is automatically shaken up and
+			down sinsoidally.  When the &quot;Motion On&quot; box is UNCHECKED,
+			the user shakes the sheet up and down by left clicking on the silver ball and moving the mouse
+			up and down.</p>
+        <p>The black line perpendicular to the pink sheet of charge represents a field line of the total electric field of the sheet
+        	(the static field plus the radiation field).  The orange arrows represent the radiation electric
+        	field (without the static field).  The blue arrows represent the radiation magnetic field
+
+</p>
+
+		<h1>View Controls:</h1>
+		<p>The view controls are as follows.  To rotate, <i>left-click and drag</i> in the view window.
+		To translate the view perpendicular to the camera view, <i>right-click and drag</i> in the view window.
+		To zoom in and out, <i>alt-left-click and drag</i> in the view window or <i>middle-button-click and drag</i>. </p>
+
+
+<p>(Please be patient - the simulation may take ~20 seconds to load)</p>
+<iframe id="teal-iframe" src="/static/html/gwt-teal/PlaneWave2.html?size=460&amp;graphw=300&amp;graphh=225" width="818" height="490" scrolling="no" frameborder="1" />
+
+<script type="text/javascript">
+function toggleDisplay( id, hidetext, showtext )
+{
+  link = document.getElementById( id + "l" ).childNodes[0];
+
+  with( document.getElementById( id ).style )
+    {
+      if( display == "none" )
+	{
+	  display = "inline";
+	  link.nodeValue = hidetext;
+	}
+      else
+	{
+	  display = "none";
+	  link.nodeValue = showtext;
+	}
+    }
+}
+</script>
+<!--
+ <p>More about this simulation: <a href="javascript:toggleDisplay('ht3','hide','show')" id="ht3l">show</a></p>
+		<div id="ht3" style="display:none">
+
+
+         	<p>This JavaScript simulation illustrates the field
+	 pattern created by two point charges with opposite signs of charge. In this simulation,
+	 the position and charge of each particle can be modified in real time, and the field
+	 configuration will update itself accordingly.
+
+	All three field visualization techniques can be applied to show the overall electric
+	field of the two-charge configuration: vector field, field lines, and "grass seeds".</p>
+
+<p>Click and drag using the left mouse button to rotate. Click and drag using the right mouse button (or use SHIFT + left mouse button) to change the center of view. And click and drag using the mouse wheel (or use CTRL + left mouse button) to zoom in/out. The two spheres can be selected and dragged.
+</p>
+
+<p></p>
+
+
+
+
+</div>
+-->
+</span>
+</html>

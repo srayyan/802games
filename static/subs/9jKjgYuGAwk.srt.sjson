@@ -1,0 +1,50 @@
+{
+  "start": [
+    680, 
+    4910, 
+    11390, 
+    13760, 
+    17370, 
+    20080, 
+    25110, 
+    28800, 
+    32200, 
+    39230, 
+    44630, 
+    49570, 
+    53310, 
+    57520
+  ], 
+  "end": [
+    4910, 
+    11390, 
+    13760, 
+    17370, 
+    20080, 
+    25110, 
+    28800, 
+    32200, 
+    35620, 
+    44630, 
+    49570, 
+    53310, 
+    57520, 
+    58830
+  ], 
+  "text": [
+    "WALTER LEWIN: In Ohm's Law, V equals I R, tells you then,", 
+    "immediately, that if this is not 0, but if this is 0, that", 
+    "I would go to infinity.", 
+    "So you cannot have any electric field in a", 
+    "superconductor.", 
+    "If I approach a superconducting disc or", 
+    "material with a magnet--", 
+    "say this is the north pole and this is the south pole--", 
+    "so we have a magnetic field configuration roughly like so.", 
+    "If I approach this superconducting material, then", 
+    "the EMF generated in here because of Faraday's law,", 
+    "because there's a change in magnetic flux coming up, that", 
+    "EMF must remain 0, because you cannot have an electric field", 
+    "inside a superconductor."
+  ]
+}

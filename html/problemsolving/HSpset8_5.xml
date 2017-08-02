@@ -1,0 +1,7 @@
+
+<html display_name="An RLC Circuit at Resonance">
+
+    <p>
+A driven RLC circuit is driven at its resonant frequency by a generator with an amplitude of [mathjaxinline]90[/mathjaxinline] Volts. The capacitance is [mathjaxinline]2.5 \times 10^{-6}[/mathjaxinline] Farads, the inductance is [mathjaxinline]L=0.90[/mathjaxinline] Henries, and the resistance is [mathjaxinline]400[/mathjaxinline] Ohms. At resonance, we have [mathjaxinline]\omega L = 1/\omega C = 600[/mathjaxinline] Ohms. What is the root mean square voltage measured individually across the capacitor and the inductor? If we put a voltmeter across both the capacitor and the inductor together, what root mean square voltage will we read? </p>
+
+</html>
